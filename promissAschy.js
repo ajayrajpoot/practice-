@@ -24,3 +24,70 @@ let myPromise = new Promise(function(myResolve, myReject) {
 
 
  */
+
+let promises1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('1')
+    console.timeLog('ALLP')
+
+    resolve("promiss 1 resolve");
+  }, 3000);
+})
+let promises2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('2')
+    console.timeLog('ALLP')
+    resolve("promiss 2 resolve");
+  }, 2000);
+})
+let promises3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('3')
+    console.timeLog('ALLP')
+    resolve("promiss 3 resolve");
+  }, 1000);
+})
+console.time('ALLP')
+
+// rum parllel tack 3 to exicule 3 task
+// wait for all Settled or any one reject
+Promise.all([promises1, promises2, promises2]).then(data => {
+  console.timeEnd('ALLP')
+  console.log("All")
+  console.log(data[0]);
+  console.log(data[1]);
+  console.log(data[2]);
+}
+
+).catch(e => {
+  console.error(">>>", e.message)
+});
+
+
+// rum parllel tack 3 to exicule 3 task
+// wait for all Settled  
+Promise.allSettled([promises1, promises2, promises2]).then(data => {
+  console.timeEnd('ALLP')
+  console.log("All")
+  console.log(data[0]);
+  console.log(data[1]);
+  console.log(data[2]);
+}
+
+).catch(e => {
+  console.error(">>>", e.message)
+})
+
+
+
+// rum parllel tack 3 to exicule 3 task
+// wait for first resolve or rect  
+Promise.race([promises1, promises2, promises2]).then(data => {
+  console.timeEnd('ALLP')
+  console.log("All")
+  console.log(data);
+}
+
+).catch(e => {
+  console.error(">>>", e.message)
+})
