@@ -3,7 +3,8 @@
 
 
 Globals are of three parts among them
-one is global another is process and 
+one is global 
+another is process and 
 the third one is buffer 
 
 so the first one globa; is namesspece object whih acts

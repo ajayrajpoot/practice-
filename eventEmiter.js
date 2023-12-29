@@ -1,5 +1,9 @@
 // event emitur is used to raise and handle custom event
-
+/**
+ * An Event Emitter is a Node.js module that facilitates communication between objects in a Node.js application. 
+ * It is an instance of the EventEmitter class, which provides a set of methods to listen for and emit events.
+ *  In Node.js, events are a core part of the platform, and they are used to handle asynchronous operations.
+ */
 const events = require('events');
 
 let em = new events.EventEmitter();

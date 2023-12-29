@@ -1,8 +1,91 @@
 /**
+ * 
+ * 
+ * ng g module pages/admin --route admin --module pages.module
+ * 
+ * 
+ -- package.json -->Angular workspace configuration
+The angular.json file at the root level of an Angular workspace provides workspace-wide and project-specific configuration defaults. These are used for build and development tools provided by the Angular CLI. Path values given in the configuration are relative to the root workspace directory.
+
+--- tsconfig.json	TypeScript compiler configuration.
+
+---main.ts -- >
+The job of main.ts is to boostrap the application. It loads everything and controls the startup of the application.
+
+import { enableProdMode } from '@angular/core'; 
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'; 
+import { AppModule } from './app/app.module'; 
+import { environment } from './environments/environment'; 
+if (environment.production) { 
+ enableProdMode(); 
+} 
+platformBrowserDynamic().bootstrapModule(AppModule); 
+
+
+----> Exact difference between AOT and IVY?
+Angular Ivy is the new default rendering engine.
+Starting from version 9 of Angular, your TypeScript code will be compiled using Ivy instead of the older ViewEngine (VE).
+Basically, Ivy decreases your bundle sizes, enhances testing, and improves debugging capabilities. In addition, Ivy uses Ahead-of-Time compilation to speed up your apps.
+To summarise -
+
++---------------------------+-------------------+
+| Ivy                       | AOT               |
++---------------------------+-------------------+
+| It is a rendering engine. | It is a compiler. |
++---------------------------+-------------------+
+Real difference would be between -
+
+Ivy vs ViewEngine(VE)
+AOT vs JIT
+
+---->
+
+What is Bootstrap?
+Let us understand the meaning of Bootstrap precisely. Bootstrap is a framework based on HTML, CSS, and JavaScript. It is used majorly for developing websites that are highly responsive and mobile-friendly. It is a front-end framework that enables a faster web development process. The design templates used by Bootstrap are all based on HTML and CSS. These templates are used for typography, image carousels, buttons, tables, navigation, modals, etc. Bootstrap also makes use of JavaScript plug-ins to create responsive designs.
+
+
+
+############################
+Angular Bootstrap
+Angular Bootstrap is a component that initiates or starts the Angular application. It basically controls the initialization process of the application. The function used to start the application is angular.bootstrap(). The syntax is given by:
+
+angular.bootstrap(element, [modules], [config])
+In the above syntax, the “element” denotes the DOM element. It can be a document, file, etc., basically something that forms the root of the Angular application.
+
+Next is the “modules” that denote the array of modules, if any, to be loaded.
+
+Lastly, “config” denotes the configuration options.
+
+Angular Bootstrap takes the following steps to initiate the Angular application :
+
+Firstly, the loading of Index.html
+Next is the loading of Angular, third-party libraries, and applications
+Main.ts the application entry point
+Root module
+Root component
+Template
+############################
+
+
+
 1. What is anguler ?
     Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. 
     As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications 
     in a maintainable manner. 
+
+1. What is Angular? Why was it introduced?
+    Angular was introduced to create Single Page applications. This framework brings structure and consistency to web applications and provides excellent scalability and maintainability. 
+
+    Angular is an open-source, JavaScript framework wholly written in TypeScript. It uses HTML's syntax to express your application's components clearly. 
+
+2. What is TypeScript?
+    TypeScript is a superset of JavaScript that offers excellent consistency. It is highly recommended, as it provides some syntactic sugar and makes the code base more comfortable to understand and maintain. Ultimately, TypeScript code compiles down to JavaScript that can run efficiently in any environment. 
+
+     TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. 
+    All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. 
+    However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. 
+    
+    npm install -g typescript
 
 2. What is anguler Js ?
 
@@ -15,12 +98,8 @@
 
 4 .What is Document Object Model (DOM) ?
     DOM (Docume  structure of HTML tags.
-
-5. What is TypeScript ? 
-    TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. 
-    All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. 
-    However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. 
-    npm install -g typescript
+ 
+   
 
 6. What is Data Binding ?
     Data binding is a process that enables users to manipulate web page elements through a web browser.
@@ -47,6 +126,7 @@
 
     Event binding: Lets your app respond to user input in the target environment by updating your application data.
     Property binding: Enables users to interpolate values that are computed from your application data into the HTML.
+
     4. Metadata
     Metadata tells Angular how to process a class. It is used to decorate the class so that it can configure the expected behavior of a class.
 
@@ -88,10 +168,10 @@ What are controllers?
     Decorators are a design pattern or functions that define how Angular features work. They are used to make prior modifications to a class,
     service, or filter. Angular supports four types of decorators, they are:
 
-    1. Class Decorators
-    2. Property Decorators
-    3. Method Decorators
-    4. Parameter Decorators
+    1. Class Decorators , such as @Component and @NgModule
+    2. Property Decorators, such as @Input and @Output
+    3. Method Decorators, such as @HostListener
+    4. Parameter Decorators, such as @Inject
 
 9. What are Directives in Angular?
     Directives are attributes that allow the user to write new HTML syntax specific to their applications. They execute whenever the Angular
@@ -123,14 +203,6 @@ What are controllers?
     The questions are bifurcated into two levels, beginner and advanced. 
   
 
-1. What is Angular? Why was it introduced?
-    Angular was introduced to create Single Page applications. This framework brings structure and consistency to web applications and provides excellent scalability and maintainability. 
-
-    Angular is an open-source, JavaScript framework wholly written in TypeScript. It uses HTML's syntax to express your application's components clearly. 
-
-2. What is TypeScript?
-    TypeScript is a superset of JavaScript that offers excellent consistency. It is highly recommended, as it provides some syntactic sugar and makes the code base more comfortable to understand and maintain. Ultimately, TypeScript code compiles down to JavaScript that can run efficiently in any environment. 
-
 3. What is data binding? Which type of data binding does Angular deploy?
     Data binding is a phenomenon that allows any internet user to manipulate Web page elements using a Web browser. It uses dynamic HTML and does not require complex scripting or programming. We use data binding in web pages that contain interactive components such as forms, calculators, tutorials, and games. Incremental display of a webpage makes data binding convenient when pages have an enormous amount of data. 
 
@@ -148,14 +220,7 @@ What are controllers?
 
     @Route configuration is used to define routing information
     
-6. What are decorators in Angular? 
-    Decorators are a design pattern or functions that define how Angular features work. They are used to make prior modifications to a class, service, or filter. Angular supports four types of decorators, they are:
-
-    Class Decorators
-    Property Decorators
-    Method Decorators
-    Parameter Decorators
-
+ 
 
 7. Mention some advantages of Angular.
     Some of the common advantages of Angular are - 
@@ -176,14 +241,7 @@ What are controllers?
 
 10. What are Annotations in Angular?
     Annotations in Angular are used for creating an annotation array. They are the metadata set on the class that is used to reflect the Metadata library.
-
-11. What are Directives in Angular?
-    Directives are attributes that allow the user to write new HTML syntax specific to their applications. They execute whenever the Angular compiler finds them in the DOM. Angular supports three types of directives.  
-
-    Component Directives
-    Structural Directives
-    Attribute Directives 
-
+ 
 12. What is an AOT compilation? What are its advantages?
     The Ahead-of-time (AOT) compiler converts the Angular HTML and TypeScript code into JavaScript code during the build phase, i.e., before the browser downloads and runs the code.
 
@@ -217,7 +275,8 @@ What are controllers?
 
     import { Pipe, PipeTransform } from '@angular/core';
     @Pipe({
-      name: 'demopipe'
+      name: 'demopipe',
+      pure:true/false
     })
 
     export class DemopipePipe implements PipeTransform {
