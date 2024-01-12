@@ -1,0 +1,52 @@
+What is SDLC?
+The Software Development Life Cycle is referred to as SDLC. The SDLC helps us deliver software with the highest quality at the lowest cost.
+
+Using SDLC, an organization can develop software in a well-structured way and maintain quality by testing and validating user specifications before releasing the software to a live environment. SDLC offers a well-structured flow of different phases.
+
+An application development life cycle is also known as the Software Development Life Cycle or SDLC, and it can be used to develop both hardware and software components.
+
+Iterative and incremental processes are incorporated into the SDLC model. Ensuring quick delivery of a working software solution, it focuses more on customer satisfaction and process adaptability.
+
+
+Phases of SDLC
+SDLC consists of various phases.
+
+1. Planning
+2. Design 
+3. Implementation
+4. Testing 
+5. Delivery/Deployment
+6. Maintenance
+
+
+1. Planning
+The first step is to gather and analyze requirements. This process includes getting customer input, meeting senior managers, 
+and learning about sales and marketing. The requirements should be properly documented. The document is referred to as the 
+Software Requirements Specification (SRS). As part of the project life cycle, the product requirements are outlined.
+
+2. Design 
+Using the output of the initial phase, the SRS document (Software Requirement Specification), 
+we generate a software architecture for implementing system development. 
+
+In addition to identifying and specifying the system and hardware requirements, this phase also helps define the overall 
+programming language framework, database architecture, and system architecture.
+
+The system design specifications are used as input in the next phase of the model.
+
+3. Implementation
+A suitable programming language is used in the implementation of the project. Compilers, interpreters, code editors, 
+integrated development environments, and debuggers can all be used to write and test programs. Depending on the application, 
+the programming language can be chosen. During this phase, the developed module is tested unit by unit.
+
+4. Testing 
+Testing ensures that a software program works as expected. This way, we can determine whether the final project meets the 
+requirements. Testing includes integration testing, system testing, etc. Two modules are tested together during integration 
+testing, and a system test is a complete project test.
+
+5. Delivery/Deployment
+Ultimately, the product is released in the market. A brand-new feature can be added to the product based on customer feedback. 
+Existing customers receive maintenance and the required services. SDLC consists of these major phases.
+
+6. Maintenance
+Publishing the software does not end the process. You need to be checking, tracking and analyzing it on timely basis to ensure 
+that you are extracting actual value out of it. The operation needs a lot of operational maintenance after launch.

@@ -82,6 +82,8 @@ Promise.allSettled([promises1, promises2, promises2]).then(data => {
 
 // rum parllel tack 3 to exicule 3 task
 // wait for first resolve or rect  
+// The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+
 Promise.race([promises1, promises2, promises2]).then(data => {
   console.timeEnd('ALLP')
   console.log("All")

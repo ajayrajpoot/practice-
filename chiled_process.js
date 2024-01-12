@@ -7,9 +7,6 @@ spawn - spawn_demo.js
 fork - fork_demo.js (also uses longtask.js)
 
 
-fork- The Fork method in Node.js creates a new child process that runs a separate Node.js 
-instance and can be useful for running CPU-intensive tasks or creating a cluster of Node.js servers.
-
 
 -- spawn
 Spawn() launches a new process with the available set of commands.
@@ -19,6 +16,9 @@ This method doesn’t generate a new V8 instance, and only a single copy of the 
 fork() is a particular case of spawn() that generates a new instance of a V8 engine.
 Multiple workers run on a single node code base for multiple tasks.
 
+
+fork- The Fork method in Node.js creates a new child process that runs a separate Node.js 
+instance and can be useful for running CPU-intensive tasks or creating a cluster of Node.js servers.
 
 
  */
@@ -34,7 +34,7 @@ exec('pwd', (error, stdout, stderr) => {
   if (stderr) {
     console.log(`stderr: ${stderr}`);
     return;
-  }
+  } 
   console.log(`stdout: ${stdout}`);
 });
 

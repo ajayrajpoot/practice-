@@ -1,0 +1,51 @@
+ 
+Is javascript compiled or interpreted language?
+ the answer is that it is a bit of both. It is interpreted in older browsers, but in modern browsers, 
+ it is compiled with the help of a JIT compiler.
+
+
+1. debounce
+we debounce a function that should be called after a certain event has happened. It is used in events like drag, keyup, etc. 
+with the purpose of not firing all the time the event gets fired but instead when the series of events is done. 
+Typically after a whole word has been typed, or a drag or resize sequence has ended.
+
+2. throttle
+we throttle a function that should fire while a series of events is happening, but when we want to control the amount of 
+times it gets called. Like in a drag movement we want the function to be called only every x pixels of distance, or only 
+every 100ms, and not every time the event is fired. So the throttle function is called while the series of events is happening, 
+just fewer times.
+
+
+3.
+WHAT IS CURRYING IN JAVASCRIPT?
+Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, 
+each taking a single argument. Currying helps you avoid passing the same variable multiple times, and 
+it helps you create a higher order function.
+
+That is, when we turn a function call sum(1,2,3) into sum(1)(2)(3). 
+
+Why Is Currying in JavaScript Useful?
+Currying helps you avoid passing the same variable again and again.
+It helps to create a higher order function.
+
+Currying transforms a function with multiple arguments into a sequence/series of functions, each taking a single argument.
+
+For example:
+
+function sum(a, b, c) {
+    return a + b + c;
+}  
+=======>
+
+function sum(a) {
+    return (b) => {
+        return (c) => {
+            return a + b + c
+        }
+    }
+}
+console.log(sum(1)(2)(3)) // 6
+
+4.  What's The Difference Between Async & Defer?
+async and defer both load JavaScript asynchronously without render blocking, but async executes as soon as possible while defer runs in sequence toward the end of the loading process, just before the DOMContentLoaded event.
+
