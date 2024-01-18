@@ -34,4 +34,28 @@ Data stored randomly and memory allocated
 Stack memory
 Memory allocated in the form of stacks. Mainly used for functions.
 
-*/
+
+
+--------------------
+https://inside.caratlane.com/network-i-o-the-underhood-of-node-js-121424f36ae5
+
+elevent loop hava 7 - thread
+
+1. Without Network I/O
+
+    7 threads default per process.
+
+        4 threads for LIBUV(fs, zlib, crypto) -> either to execute cpu intensive job(crypto) or File I/O job(because underlying OS does not support async for it)
+        1 thread for javascript execution
+        1 thread for garbage collector
+        1 thread for event loop -> which is mainly used, so nodejs is usually regarded as 1 thread(event loop) per 1 process runtime.
+
+2. With Network I/O
+
+    11 threads default per process
+
+    7 threads same with above
+    4 threads for DNS lookup -> which used to share above LIBUV thread pool but separated to solve this issue
+
+
+*/  

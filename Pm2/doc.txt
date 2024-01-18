@@ -1,0 +1,8 @@
+To start an application:
+$ pm2 start api.js
+
+You can also start any kind of application like bash commands, script, binaries:
+
+$ pm2 start "npm run start"
+$ pm2 start "ls -la"
+$ pm2 start app.py
