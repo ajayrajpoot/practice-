@@ -29,4 +29,14 @@
     Pipes are defined using the pipe “|” symbol. 
     Pipes can be chained with other pipes.
     Pipes can be provided with arguments by using the colon (:) sign.
+
+
+    DatePipe	Formats a date value according to locale rules.
+UpperCasePipe	Transforms text to all upper case.
+LowerCasePipe	Transforms text to all lower case.
+CurrencyPipe	Transforms a number to a currency string, formatted according to locale rules.
+DecimalPipe	Transforms a number into a string with a decimal point, formatted according to locale rules.
+PercentPipe	Transforms a number to a percentage string, formatted according to locale rules.
+
+
  */

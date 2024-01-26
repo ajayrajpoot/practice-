@@ -16,7 +16,7 @@ In other words, a closure gives you access to an outer function's scope from an 
 
 
 
-  //lexical Scope
+//lexical Scope
 // console.log("When inner function accessess variable of outer function")
 
 //closure

@@ -14,7 +14,6 @@ export class MyClass {
 In this example, we define a module called myModule that exports a function called myFunction and a class called MyClass. The export keyword makes these members available outside of the module.
 To use the members of the myModule module in another file, you can import them using the import keyword:
 
-
  // main.ts
 import { myFunction, MyClass } from "./myModule";
 

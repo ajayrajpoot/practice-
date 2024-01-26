@@ -78,8 +78,4 @@ Async/Await
 3.If the function “fxn1” is to executed after await, then await X() suspends execution of the current function and then fxn1 is executed.                                
 4.Error handling is done using .try() and .catch() methods.
 5.Using Async/Await makes it easier to read and understand the flow of the program as compared to promise chains.                                                        
-
-
-
-
 */

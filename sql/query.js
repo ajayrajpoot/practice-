@@ -59,5 +59,14 @@ EXCEPT (called MINUS in MySQL and Oracle) – returns only the records obtained 
     ALTER TABLE Orders ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
     ALTER TABLE Orders DROP FOREIGN KEY FK_PersonOrder;
     
+ELECT  *
+FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY OrderDate ) AS RowNum, *
+          FROM      Orders
+          WHERE     OrderDate >= '1980-01-01'
+        ) AS RowConstrainedResult
+WHERE   RowNum >= 1
+    AND RowNum < 20
+ORDER BY RowNum
+
 
  */

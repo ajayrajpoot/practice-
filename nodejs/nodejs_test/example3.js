@@ -42,6 +42,21 @@ console.log(test());
  John Doe
  John Doe
   */
+
+  
+var obj = {
+   fullname: 'Colin Ihrig',
+   prop: {
+      fullname: 'Aurelio De Rosa',
+      getFullname: function() { 
+         return fullname;   
+      }
+   }
+};
+console.log(obj.prop.getFullname()); // ReferenceError: fullname is not defined
+var test = obj.prop.getFullname;// ReferenceError: fullname is not defined
+console.log(test());
+
  
  
  function init() {

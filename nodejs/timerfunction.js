@@ -64,3 +64,26 @@ End
 nextTick
 Promise Resolved
  */
+
+
+/**------------------
+ * 
+Timers Methods
+Method	Description
+clearImmediate()	Cancels an Immediate object
+clearInterval()	Cancels an Interval object
+clearTimeout()	Cancels a Timeout object
+ref()	Makes the Timeout object active. Will only have an effect if the Timeout.unref() method has been called to make the Timeout object inactive.
+setImmediate()	Executes a given function immediately.
+setInterval()	Executes a given function at every given milliseconds
+setTimeout()	Executes a given function after a given time (in milliseconds)
+unref()	Stops the Timeout object from remaining active.
+
+
+const myInterval = setInterval(() => { console.log("setInterval"); }, 1000);
+clearInterval(myInterval);
+
+const myTimeout = setTimeout(() =>{ console.log( "Happy Birthday to You !!"); }, 3000);
+clearTimeout(myTimeout);
+
+

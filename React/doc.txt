@@ -18,9 +18,11 @@ Simple business logic
 Different properties that don’t change in any correlated way and can be managed by multiple useState hooks
 Prefer useReducer if we have:
 
+
 JavaScript objects or arrays as a state ( eg. our second use case )
 Complicated business logic more suitable for a reducer function
 Different properties tied together that should be managed in one state object
+
 
 ---
 

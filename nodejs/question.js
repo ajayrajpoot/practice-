@@ -23,20 +23,8 @@ Jest? 11:38
 Other testing frameworks used in nodejs or javascript? 11:44
 How to get code coverage in node js unit testcases? 11:58
 
-
-
-➡️ What is Closure? 1:20
-➡️ What is process.nextTick? 4:37
-➡️ What is setImmediate? 6:05
-➡️ ReadFile vs CreateReadStream? 7:22
-➡️ Simple nodejs server? 8:41
-➡️ What is forever? 10:12
-➡️ What is Nodemon? 13:14
-➡️ What is PM2? 14:42
-
-
-Difference between var, let and const? 0:20
-Difference between nodejs, ajax, and jquery? 3:40
+ 
+➡️ What is forever? 10:12  
 How to call an array of promises asynchronously? 4:45
 Promise.all vs Promise.allSettled? 9:10
 What is Promise.race? 10:16

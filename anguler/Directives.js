@@ -8,4 +8,8 @@
     Component Directives
     Structural Directives
     Attribute Directives 
+
+    Components—directives with a template. ...
+Attribute directives—directives that change the appearance or behavior of an element, component, or another directive.
+Structural directives—directives that change the DOM layout by adding and removing DOM elements.
  */

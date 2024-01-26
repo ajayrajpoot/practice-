@@ -1,7 +1,7 @@
 console.log('start beyond time');
 const timeoutObj = setTimeout(() => {
     console.log('timeout beyond time');
-  }, 800);
+  }, 500);
   
   const immediateObj = setImmediate(() => {
     console.log('immediately executing immediate');

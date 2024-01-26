@@ -29,7 +29,7 @@ const testSchema = new mongoose.Schema({
 
 const Test = mongoose.model('Test', testSchema);
 
-Test.watch().on('change', (data) => {
+Test.(watch).on('change', (data) => {
   // check if it is a delete operation
   if (data.operationType == 'delete') {
     // do stuff

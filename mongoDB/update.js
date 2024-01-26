@@ -16,6 +16,8 @@ await Test.updateMany({}, { location: 'Florida' });
 
 // Set `location` property on documents whose 'name' starts with 'M'
 await Test.updateMany({ name: /^M/ }, { $set: { location: 'Miami' } });
+await Test.updateMany({ name:{$regex: '^M' }, { $set: { location: 'Miami' } });
+
 
 ----------------------- $inc
 db.products.insertOne( { _id: 1, sku: "abc123", quantity: 10, metrics: { orders: 2, ratings: 3.5 } } )
@@ -89,4 +91,6 @@ db.products.updateOne( { _id: 100 }, { $set: { "details.make": "Kustom Kidz" } }
   tags: [ 'coats', 'rain gear', 'clothing' ], ratings: [ { by: 'Customer007', rating: 2 } ]
 }
 
+-----delete feild and delete 
+db.collect.updateMany({}, {$unset:{'studentdattail': ''}})
  */

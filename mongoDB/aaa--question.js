@@ -1,3 +1,8 @@
+Auto delete inserted record in mongodb
+
+https://database.guide/category/dbms/nosql/mongodb/page/2/
+
+
 /**
  * How to Fix 'Query was already executed' in Mongoose
  * 
@@ -31,8 +36,30 @@ d/w mongo and mogoD
     rows --------- document (BSON)
     column ----------- fields
 
+    Comparison Query Operator
+    -$eq
+    -$gt
+    -$gte
+    -$in
+    -$lt
+    -$lte
+    -$ne
+    -$nin
 
-    
+
+    Array Query Operators
+    -$all
+    -$elemMatch
+    -$size
+
+    Element Query Operators
+    -$exists // it taks true/false
+    -$type // give type of value
+
+
+
+
+
 
 
 

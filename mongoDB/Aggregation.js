@@ -83,19 +83,19 @@ An aggregation pipeline consists of one or more stages that process documents:
         $match: new mongoose.Type.ObjectId(req.user_id)
     },
     {
-        $lookup : {
-            from: 'video',
-            localField:'watchHistory',
-            foreignFeild: 'id',
-            as : 'watchHistory',
-            pipeline: [
-                {
-                    $lookup : {
+            $lookup : {
+                from: 'video',
+                localField:'watchHistory',
+                foreignFeild: 'id',
+                as : 'watchHistory',
+                pipeline: [
+                    {
+                        $lookup : {
                         from:'users',
                         localFeild:'owner', // use from watchHistory
                         foreignFeild:'_id',
                         as:'owner',
-                        popeline:[
+                        pipeline:[
                             {
                                 $project:{
                                     fullNameL:1,

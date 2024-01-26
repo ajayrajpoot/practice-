@@ -5,6 +5,7 @@ git branch
 git branch -a 
 git branch newBranch 
 git checkout chanegdBranchName
+git checkout -b chanegdBranchName
 
 git add .
 git add filename1 file2

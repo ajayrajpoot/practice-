@@ -26,6 +26,8 @@ MongoDB uses a dynamic database schema
 MongoDB is very easy to scale up or down
 MongoDB has inbuilt support for data partitioning (Sharding).
 
+Sharding is a method for distributing a single dataset across multiple databases, which can then be stored on multiple machines. This allows for larger datasets to be split into smaller chunks and stored in multiple data nodes, increasing the total storage capacity of the system.
+
 
 2. What is a Document in MongoDB?
 A Document in MongoDB is an ordered set of keys with associated values. It is represented by a map, hash, or dictionary. In JavaScript, documents are represented as objects:
