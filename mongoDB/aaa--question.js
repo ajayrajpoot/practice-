@@ -1,4 +1,5 @@
 Auto delete inserted record in mongodb
+when we delete Object(_id) -> mongobd will cress
 
 https://database.guide/category/dbms/nosql/mongodb/page/2/
 

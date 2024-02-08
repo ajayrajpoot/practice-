@@ -1,6 +1,15 @@
 /**
 https://www.interviewbit.com/mongodb-interview-questions/
 
+ACID 
+Atomacity --> Entire transaction must finish Or revert the database to old state
+Consistancy  --> This means that integrity constraints must be maintained so that the database is consistent before and after the transaction. It refers to the correctness of a database. Referring to the example above, 
+The total amount before and after the transaction must be maintained. 
+
+Isolation  --This property ensures that multiple transactions can occur concurrently without leading to the inconsistency of the database state. Transactions occur independently without interference. Changes occurring in a particular transaction will not be visible to any other transaction until that particular change in that transaction is written to memory or has been committed. This property ensures that the execution of transactions concurrently will result in a state that is equivalent to a state achieved these were executed serially in some order. 
+
+Durability  --- This property ensures that once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, thus, are never lost. 
+
 
 1. What is SQL?
 a. SQL (Structured Query Language) is a programming language used for managing
@@ -111,89 +120,113 @@ procedure does not return a value directly but can perform various actions.
 26. What is the difference between GROUP BY and HAVING clauses?
 a. GROUP BY is used to group rows based on one or more columns, while HAVING is
 used to filter grouped rows based on specific conditions.
+
 27. What is the difference between a database and a schema?
 a. A database is a collection of related data that is stored and organized. A schema,
 on the other hand, is a logical container within a database that holds objects like
 tables, views, and procedures.
+
 28. What is a data warehouse?
 a. A data warehouse is a large repository of data collected from various sources,
 structured and organized to support business intelligence and reporting.
+
 29. What is the difference between OLTP and OLAP?
 a. OLTP (Online Transaction Processing) is used for day-to-day transactional
 operations and focuses on real-time processing. OLAP (Online Analytical
 Processing) is used for complex analytical queries and focuses on historical data
 analysis.
+
 30. What is a correlated subquery?
 a. A correlated subquery is a subquery that references columns from the outer
 query. It is executed for each row of the outer query, making it dependent on the
 outer query's results.
+
 31. What is the difference between a temporary table and a table variable?
 a. A temporary table is a physical table that is created and used temporarily within
 a session or a specific scope, whereas a table variable is a variable with a
 structure similar to a table and exists only within the scope of a user-defined
 function or a stored procedure.
+
 32. What is the difference between UNION and JOIN?
 a. UNION combines rows from two or more tables vertically, while JOIN combines
 columns from two or more tables horizontally based on related columns.
+
 33. What is the difference between WHERE and HAVING clauses?
 a. WHERE is used to filter rows before grouping in a query, while HAVING is used to
 filter grouped rows after grouping.
+
 34. What is the difference between a database and a data warehouse?
 a. A database is a collection of related data organized for transactional purposes,
 while a data warehouse is a large repository of data organized for analytical
 purposes.
+
 35. What is the difference between a primary key and a candidate key?
 a. A candidate key is a column or a set of columns that can uniquely identify each
 record in a table. A primary key is a chosen candidate key that becomes the main
 identifier for the table.
+
 36. What is the difference between a schema and a database?
 a. A database is a collection of related data, while a schema is a logical container
 within a database that holds objects like tables, views, and procedures.
+
 37. What is a self-join?
 a. A self-join is a join operation where a table is joined with itself. It is used when you
 want to compare rows within the same table.
+
 38. What is a recursive SQL query?
 a. A recursive SQL query is a query that refers to its own output in order to perform
 additional operations. It is commonly used for hierarchical or tree-like data
 structures.
+
 39. What is the difference between a correlated subquery and a nested subquery?
 a. A correlated subquery is a subquery that references columns from the outer
 query, while a nested subquery is a subquery that is independent of the outer
 query.
+
 40. What is the difference between a natural join and an equijoin?
 a. A natural join is a join operation that automatically matches columns with the
 same name from both tables, whereas an equijoin is a join operation that
 explicitly specifies the join condition using equality operators.
+
 41. What is the difference between an outer join and an inner join?
 a. An inner join returns only the matching rows from both tables, whereas an outer
 join returns all rows from one table and matching rows from the other table(s).
+
 42. What is the difference between a left join and a right join?
 a. A left join returns all rows from the left table and matching rows from the right
 table, whereas a right join returns all rows from the right table and matching rows
 from the left table.
+
 43. What is a full outer join?
 a. A full outer join returns all rows from both tables, including unmatched rows, and
 combines them based on the join condition.
+
 44. What is a self-referencing foreign key?
 a. A self-referencing foreign key is a foreign key that references the primary key of
 the same table. It is used to establish hierarchical relationships within a single
 table.
+
 45. What is the purpose of the GROUP BY clause?
 a. The GROUP BY clause is used to group rows based on one or more columns. It is
 typically used with aggregate functions to perform calculations on each group.
+
 46. What is the purpose of the HAVING clause?
 a. The HAVING clause is used to filter grouped rows based on specific conditions. It
 operates on the results of the GROUP BY clause.
+
 47. What is the purpose of the ORDER BY clause?
 a. The ORDER BY clause is used to sort the result set based on one or more columns
 in ascending or descending order.
+
 48. What is the purpose of the DISTINCT keyword?
 a. The DISTINCT keyword is used to retrieve unique values from a column in a result
 set, eliminating duplicate rows.
+
 49. What is the purpose of the LIKE operator?
 a. The LIKE operator is used in a WHERE clause to search for a specified pattern in a
 column. It allows wildcard characters like % (matches any sequence of
 characters) and _ (matches any single character).
+
 50. What is the purpose of the IN operator?
 a. The IN operator is used in a WHERE clause to check if a value matches any value in
 a list or a subquery.

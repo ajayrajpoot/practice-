@@ -87,3 +87,12 @@ const myTimeout = setTimeout(() =>{ console.log( "Happy Birthday to You !!"); },
 clearTimeout(myTimeout);
 
 
+setImmediate() and setTimeout() are similar, but behave in different ways depending on when they are called.
+
+setImmediate() is designed to execute a script once the current poll phase completes.
+setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.
+The order in which the timers are executed will vary depending on the context in which they are called. If both are called from within the main module, then timing will be bound by the performance of the process (which can be impacted by other applications running on the machine).
+
+
+
+

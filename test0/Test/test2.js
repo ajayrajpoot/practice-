@@ -6,4 +6,14 @@ function b(){
     };
 }
 b();
-console.log(a)
+console.log(a) // 0
+
+var a =0;
+function b(){
+    a =10;
+    return;
+    var b =function(){
+    };
+}
+b();
+console.log(a) // 10

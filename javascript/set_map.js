@@ -16,6 +16,7 @@ letters.add("a");
 delete()	Removes an element from a Set
 has()	Returns true if a value exists
 clear()	Removes all elements from a Set
+
 -forEach()	Invokes a callback for each element
 letters.forEach (function(value) {
   text += value;

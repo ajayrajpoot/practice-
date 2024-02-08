@@ -18,3 +18,16 @@ people.forEach(function(object){
     }
 })
 console.log(sorted) 
+/**{
+  '20': [
+    { name: 'Ajay', age: 20 },
+    { name: 'thanos', age: 20 },
+    { name: 'Vormir', age: 20 }
+  ],
+  '21': [
+    { name: 'Lee', age: 21 },
+    { name: 'Tony', age: 21 },
+    { name: 'Steave', age: 21 }
+  ]
+}
+ */

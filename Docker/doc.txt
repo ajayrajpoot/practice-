@@ -9,4 +9,10 @@ CMD node index.js --> run our projcet
 
 docker login
 docker build -t rajpoot007/nodetest:0.0.1.RELEASE .
+
+----------------------------------------
+>docker   --> list of command
+>docker -v --> check version
+
+
   
