@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Counter from './components/Counter';
-import User from './components/User';
+import Counter from './Counter';
+import User from './User';
 
 function Home(){
     return(<>
