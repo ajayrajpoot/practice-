@@ -10,7 +10,7 @@ function Nav() {
             <ul>
                 <li> <Link to="/">Home</Link> </li>
                 <li> <Link to="/about">About</Link> </li>
-                <li> <Link to="/Contact">Contact</Link> </li>
+                <li> <Link to="/contact">Contact</Link> </li>
                 <li> <Link to="/Contact/1">ContactID</Link> </li>
                 <li> <Link to="/redirect-page">redirect-page</Link> </li>
                 <li> <Link to="/redirect">redirect</Link> </li>
