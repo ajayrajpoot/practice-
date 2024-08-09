@@ -24,6 +24,7 @@ class Student{
         
     Play(){
         // Play 
+        // Play
     }
         
     doHomeWork(){
@@ -93,7 +94,7 @@ There are 4 main principles in OOP, and they are:  inheritance, polymorphism, an
         3.Abstraction in Action:
 
             The user interacts with the car through simple public methods (start() and stop()), abstracting away the complexities of what happens internally (like engine mechanics). This simplifies how you interact with the Car object.
-
+ 
 2. Encapsulation
 
     Encapsulation means keeping properties and methods private inside a class, so that they are not accessible from outside that class.
@@ -147,7 +148,6 @@ Inheritance
     document.getElementById("demo").innerHTML = myCar.show();
 
 Polymorphism
- 
     In JavaScript, polymorphism is typically achieved through method overriding and method overloading (though JavaScript handles overloading differently from some other languages).
     
     Key Aspects of Polymorphism
@@ -210,7 +210,7 @@ Polymorphism
             console.log(calc.add(5, 10)); // Output: 15 (5 + 10)
             console.log(calc.add(5));     // Output: 5 (5 + 0)
 
-
+ 
 ----------------
 Object-Oriented Programming in JavaScript
 We have now discussed the basics of OOP. But OOP in JavaScript is bit different. We have an object linked to a prototype. Prototypes contain all methods and these methods are accessible to all objects linked to this prototype. This is called Prototypal Inheritance (or Prototypal Delegation).

@@ -63,7 +63,8 @@ Example:
   $combineLatest.subscribe(data=> {
     console.log('combineLatest data', data);
   })
-/*  output */
+
+--->  output 
 // [4, 10]
 // [4,11]
 // [4,12]

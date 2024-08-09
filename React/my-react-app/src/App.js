@@ -6,6 +6,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AppRoute from "./AppRoute";
 import Nav from "./components/nav";
 
+
+// use Reducx
+import configureStore from './store/configureStore';
+const store = configureStore();
+
 // import axios from "axios";
 
 // Importing toastify module
@@ -23,10 +28,12 @@ function App() {
   // axios.defaults.headers.common["Content-Type"] = "application/json;charset=UTF-8";
 
   return (
-    <Router>
-      <Nav />
-      <AppRoute />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Nav />
+        <AppRoute />
+      </Router>
+    </Provider>
 
     // <div className="App">
     //   <header className="App-header">

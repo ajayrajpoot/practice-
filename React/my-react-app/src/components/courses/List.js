@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import ListUI from "./ListUI";
 
-import MyContext from "../../context/myContext";
 
 function List() {
   let [pVal, SetPVal] = useState(0);
@@ -22,12 +21,12 @@ function List() {
       <h2>List</h2>
 
       {/* use Props */}
-      {/* <ListUI pVal={pVal} callChild={reciveFromChild} /> */}
+      <ListUI pVal={pVal} callChild={reciveFromChild} />
 
       {/* useContext */}
-      <MyContext.Provider value= {pVal}>
+      {/* <MyContext.Provider value= {pVal}>
         <ListUI callChild={reciveFromChild} />
-      </MyContext.Provider>
+      </MyContext.Provider> */}
     </>
   );
 }

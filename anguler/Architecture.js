@@ -24,8 +24,7 @@
     The class is always associated with the @Injectible decorator.
 
     6. Dependency Injection
-    This feature lets you keep your component classes crisp and efficient. It does not fetch data from a server, validate the user input,
-     or log directly to the console. Instead, it delegates such tasks to the services.
+    This feature lets you keep your component classes crisp and efficient. It does not fetch data from a server, validate the user input, or log directly to the console. Instead, it delegates such tasks to the services.
 
     Angular comes with its own set of advantages and disadvantages. The next two sections briefly explain them.
 
