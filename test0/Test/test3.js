@@ -8,4 +8,4 @@ function test(){
         return 10;
     }
 }
-console.log(test())
+console.log(test()) // 10

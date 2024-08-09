@@ -16,6 +16,8 @@ git pull
 git stash
 git stash pop
 
+GitHub Actions
+ file extention .yml or .yaml
 
 
 
