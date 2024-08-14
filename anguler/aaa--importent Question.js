@@ -64,7 +64,7 @@ By applying these optimization techniques, you can enhance the performance of yo
 
 --------------------------------------------
 
-15. Explain switch map , mergemap , forkjoin, combineLatest, concatMap, exhaustMap . what would happen if any of the requests fails in switch map , merge map or forkjoin ?
+15. Explain switchMap , mergemap , forkjoin, combineLatest, concatMap, exhaustMap . what would happen if any of the requests fails in switch map , merge map or forkjoin ?
 Let’s go through each operator and explain them along with examples. We’ll also discuss what happens if any of the requests fail when using switchMap, mergeMap, or forkJoin.
 switchMap: This operator is used to map each source value to an inner observable, and it only emits the values from the most recent inner observable. If a new source value arrives before the previous inner observable completes, it will switch to the new inner observable and unsubscribe from the previous one.
 Example:
@@ -197,7 +197,9 @@ It’s important to note that error handling strategies and behavior may vary ba
 --------------------------
 
 What is a difference between compiler and interpreter?
-Compiler: A compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code before the program runs. Interpreter: An interpreter translates code written in a high-level programming language into machine code line-by-line as the code runs.
+Compiler: A compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code before the program runs. 
+Interpreter: An interpreter translates code written in a high-level programming language into machine code line-by-line as the code runs.
+
 What is the difference between a compiled language and an interpreter?
 A compiled language is converted into machine code so that the processor can execute it. An interpreted language is a language in which the implementations execute instructions directly without earlier compiling a program into machine language. The compiled programs run faster than interpreted programs.
 

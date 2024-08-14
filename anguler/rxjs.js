@@ -1,4 +1,4 @@
-17. How do you handle errors in RxJS observables ?
+/*17. How do you handle errors in RxJS observables ?
 RxJS provides several operators for handling errors in Observables. The two main operators for error handling are catchError and retry.
 catchError: The catchError operator is used to catch errors that may occur in an Observable and handle them in a graceful way. It takes a function as an argument that returns another Observable or throws an error. If the function returns an Observable, the source Observable will be replaced with the returned Observable. If the function throws an error, the error will be propagated to the subscriber.
 Here is an example:
