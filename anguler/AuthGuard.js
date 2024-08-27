@@ -3,7 +3,7 @@
 In Angular, Auth Guards are used to protect routes and determine whether a user is allowed to access a specific route or not based on their authentication status or user role. Auth Guards are implemented as services and are typically used in conjunction with Angular’s routing system.
 Here’s an example to demonstrate how Auth Guards work in Angular:
 
-Create an Auth Guard service:
+Create an Auth Guard service:*/
  import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 
@@ -46,7 +46,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-In this example, we have three routes: the home route, the admin route, and the login route. The admin route is protected by the AuthGuard by setting the canActivate property to [AuthGuard].
+/*
+In this example, we have three routes: the home route, the admin route, and the login route. The admin route is protected by the AuthGuard by setting the canActivate property to [AuthGuard].*/
 3. Implement the protected component:
  import { Component } from '@angular/core';
 
@@ -80,6 +81,7 @@ export class SomeComponent {
     }
   }
 }
+/*
 In both examples above, the Auth Guard is used to conditionally display or navigate to the admin route based on the user’s authentication status. If the user is authenticated and has the appropriate role (in this case, ‘admin’), they are granted access to the route. Otherwise, they are redirected to the login page or an unauthorized page.
 Conclusion :
 Auth Guards play a crucial role in securing routes and controlling access to different parts of an Angular application based on authentication and authorization rules. By implementing and utilizing Auth Guards, you can ensure that certain routes are protected and only accessible to authorized users.

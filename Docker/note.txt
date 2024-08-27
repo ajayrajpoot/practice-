@@ -165,7 +165,11 @@ custom Network
 -  we prevent it , we use docker volume
 
 - work as permanet memory 
+<<<<<<< HEAD
+> docker run -it -v /user/ajay/desktop/myfolder : /name/myfolder ubuntu
+=======
 > docker run -it abcx /user/ajay/desktop/myfolder : /name/myfolder ubuntu
+>>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
     - first location  is from local , and sencod from container 
 
 -creat volume in docker
@@ -184,6 +188,10 @@ node_module/
 
 or
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
     FROM ubuntu
     RUN apt-get update
     RUN apt-get install -y curl
@@ -201,7 +209,11 @@ or
 
 or
 
+<<<<<<< HEAD
+WORKDIR /app
+=======
 WORKDIR app/
+>>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
     COPY package.json package.json 
     COPY package-lock.json package-lock.json 
     COPY main.js main.json
