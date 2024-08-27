@@ -56,17 +56,17 @@ console.log("script end");
 
 
 //-- my out put
-script start
-script end
- 
-setTimeout
- 
-promise1
-promise2
 
+script start
 async1 start
 async2
+promise1
+script end
 async1 end
+promise2
+setTimeout
+
+
  
 //-------5
  
@@ -91,21 +91,15 @@ new Promise(function (resolve, reject) {
 });
 
 
+//-- my out put
 begins
- 
- 
 promise 2
- 
 setTimeout 1
 promise 1
- 
- 
 setTimeout 2
- 
- 
 dot then 1
- 
- resolve 1
+resolve 1
+
  
  
  
