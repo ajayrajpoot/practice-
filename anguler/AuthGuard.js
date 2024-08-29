@@ -49,6 +49,7 @@ export class AppRoutingModule { }
 
 // In this example, we have three routes: the home route, the admin route, and the login route. The admin route is protected by the AuthGuard by setting the canActivate property to [AuthGuard].
 // 3. Implement the protected component:
+/* 
  import { Component } from '@angular/core';
 
 @Component({

@@ -23,7 +23,7 @@ if(true) {var qq = 1}
 if(true) {var qq1 = 1}
 console.log(qq1)
 
-// output: 1
+// output: 1 
 
 function f(){
     if(true) {var qq6 = 1}
@@ -36,7 +36,7 @@ f()
 
 // ------------------------ let
 if(true) {let qq1 = 1}
-console.log(qq1)
+console.log(qq1)// qq3 is not defined
 
 // output: Uncaught ReferenceError: qq5 is not defined
 console.log(qq1)
@@ -69,5 +69,6 @@ const obj = {a:1}
 obj.a = 2 //{a:2} 
 obj.b = 5 //{a:1, b:5} 
 delete obj.a //true,  {} 
-obj.a //false {a:1}
+delete obj //false 
+
 

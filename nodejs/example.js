@@ -3,8 +3,8 @@
 (function() {
     var a = b = 5;
  })();
- console.log(b);
- console.log(a);
+ console.log(b);// 5
+ console.log(a);//ReferenceError: a is not defined
 
  //----2 
 
@@ -12,8 +12,8 @@
     return (function(y) {
         console.log(x);
     })(2)
-})(1);
-
+})(1); 
+// output
 //----3
  
 var fullname = 'John Doe';
@@ -26,9 +26,9 @@ var obj = {
       }
    }
 };
-console.log(obj.prop.getFullname());
+console.log(obj.prop.getFullname()); //Aurelio De Rosa
 var test = obj.prop.getFullname;
-console.log(test());
+console.log(test()); //John Doe
 
 
 //----4
@@ -38,6 +38,8 @@ async function async1() {
   await async2();
   console.log("async1 end");
 }
+
+
 async function async2() {
   console.log("async2");
 }
@@ -56,6 +58,7 @@ console.log("script end");
 
 
 //-- my out put
+/*
 script start
 script end
  
@@ -64,9 +67,17 @@ setTimeout
 promise1
 promise2
 
+script start
 async1 start
 async2
+promise1
+script end
 async1 end
+promise2
+setTimeout
+
+
+*/
  
 //-------5
  
@@ -91,21 +102,15 @@ new Promise(function (resolve, reject) {
 });
 
 
+//-- my out put
 begins
- 
- 
 promise 2
- 
 setTimeout 1
 promise 1
- 
- 
 setTimeout 2
- 
- 
 dot then 1
- 
- resolve 1
+resolve 1
+
  
  
  

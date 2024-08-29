@@ -11,12 +11,25 @@ To summarise -
 +---------------------------+-------------------+
 | It is a rendering engine. | It is a compiler. |
 +---------------------------+-------------------+
+
+Ivy refers to the rendering engine used in Angular, which works at runtime and during compilation to generate efficient code.
+AOT refers to when the compilation occurs—during build time, rather than at runtime in the browser.
+
+
 Real difference would be between -
 
 Ivy vs ViewEngine(VE)
 AOT vs JIT 
 
+    1. JIT (Just-in-Time Compilation)
+    Overview:
+        - JIT compilation is the default mode during development. The Angular application is compiled in the browser at runtime, meaning the Angular compiler is shipped with the application and the templates are compiled just before they are rendered.
+        - This allows for quicker builds during development, as there's no need to compile the application ahead of time.
 
+    2. AOT (Ahead-of-Time Compilation)
+    Overview:
+        - AOT compilation occurs during the build process, before the application is delivered to the browser. Angular compiles the application’s templates and components into optimized JavaScript code ahead of time, eliminating the need for the Angular compiler in the final bundle.
+        - AOT is the default mode for production builds in Angular.
 
 12. What is an AOT compilation? What are its advantages?
     The Ahead-of-time (AOT) compiler converts the Angular HTML and TypeScript code into JavaScript code during the build phase, i.e., 

@@ -42,8 +42,7 @@ Instead of using a complex ngIf expression, use ngSwitch for better performance.
 
 4. Use OnPush change detection strategy
 
-By using the OnPush change detection strategy, Angular will only check for changes when the input changes, rather than every 
-time there is a change in the application.
+By using the OnPush change detection strategy, Angular will only check for changes when the input changes, rather than every time there is a change in the application.
 
 // app.component.ts
 
@@ -134,12 +133,8 @@ https://medium.com/bb-tutorials-and-thoughts/how-to-implement-ngrx-store-in-angu
 
 10. Use Web Workers
 
-Web Workers run scripts in the background, improving the performance of the application by offloading CPU-intensive 
-tasks to a separate thread.
+Web Workers run scripts in the background, improving the performance of the application by offloading CPU-intensive  tasks to a separate thread.
 
 Conclusion:
 
-By following these ten best practices, you can significantly improve the performance of your Angular application and provide 
-a better user experience. Remember, performance optimization is an ongoing process, and it’s essential to continually monitor 
-and test your application to ensure it’s running smoothly. I hope you found this guide helpful, and I encourage you to 
-incorporate these best practices into your Angular development workflow to build faster & more efficient web applications.
+By following these ten best practices, you can significantly improve the performance of your Angular application and provide a better user experience. Remember, performance optimization is an ongoing process, and it’s essential to continually monitor and test your application to ensure it’s running smoothly. I hope you found this guide helpful, and I encourage you to incorporate these best practices into your Angular development workflow to build faster & more efficient web applications.
