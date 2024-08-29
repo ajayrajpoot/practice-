@@ -57,6 +57,7 @@
     7. Restart container
     8. Kill container
     9. Destroy container
+
     We will next look at the intermediate-level docker interview questions and answers.
 
 ----------------------------------------------------------
@@ -110,6 +111,7 @@ Some advanced commands include:
  - Docker pull. Downloads an image
  - Docker stats. Provides you with container information
  - Docker images. Lists downloaded images
+ 
 20. Can you lose data stored in a container?
 Any data stored in a container remains there unless you delete the container.
 

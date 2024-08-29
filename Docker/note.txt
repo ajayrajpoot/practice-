@@ -61,7 +61,7 @@ command for build image
   .  --> location of files
 
 >docker run -it -p 8000:8000 my-image
->docker exec -it   my-image bash
+>docker exec -it my-image bash
 
 > cat main.js --> show text of file
 
@@ -165,11 +165,8 @@ custom Network
 -  we prevent it , we use docker volume
 
 - work as permanet memory 
-<<<<<<< HEAD
 > docker run -it -v /user/ajay/desktop/myfolder : /name/myfolder ubuntu
-=======
 > docker run -it abcx /user/ajay/desktop/myfolder : /name/myfolder ubuntu
->>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
     - first location  is from local , and sencod from container 
 
 -creat volume in docker
@@ -178,7 +175,7 @@ custom Network
 
 ---------------------------------- Efficient chaching
 By default all layers chached 
-- any layr update , after that all layers run
+- any layer update , after that all layers run
 
 COPY . . --> all file copy from current dir to container root directory
 
@@ -188,10 +185,6 @@ node_module/
 
 or
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
     FROM ubuntu
     RUN apt-get update
     RUN apt-get install -y curl
@@ -209,11 +202,8 @@ or
 
 or
 
-<<<<<<< HEAD
 WORKDIR /app
-=======
-WORKDIR app/
->>>>>>> e0b655fd630132538a9f201d5f9517c4444eddef
+
     COPY package.json package.json 
     COPY package-lock.json package-lock.json 
     COPY main.js main.json
@@ -225,7 +215,51 @@ WORKDIR app/
 
 
     --------------------------------multi-stage builds
+Multi-Stage Builds in Docker
+    Multi-stage builds are a powerful feature in Docker that allow you to optimize your image size and build process by creating multiple build stages. This is especially useful for large applications with complex dependencies or when you need to separate build steps for different environments (e.g., development, testing, production).
 
+How Multi-Stage Builds Work
+    -Define Multiple Build Stages: In your Dockerfile, use the FROM instruction to specify multiple base images for different stages.
+    -Copy and Build in Intermediate Stages: Copy necessary files and build intermediate artifacts in earlier stages.
+    -Copy Artifacts to Final Stage: Copy only the required artifacts from intermediate stages to the final stage.
+    -Create the Final Image: The final stage will contain the minimal set of files needed for your application to run.
+
+    Example:
+    Dockerfile
+        # Stage 1: Build the application
+        FROM node:18-alpine as builder
+        WORKDIR /app
+        COPY package*.json ./
+        RUN npm install
+        COPY . .
+        RUN npm run build   
+
+
+        # Stage 2: Create the production image
+        FROM nginx:alpine
+        COPY --from=builder /app/dist   
+        /usr/share/nginx/html
+
+
+In this example:
+
+    -Stage 1: Builds the application using Node.js and Alpine Linux.
+    -Stage 2: Copies the built application files from Stage 1 to a Nginx image, creating the final production image.
+
+Benefits of Multi-Stage Builds
+    -Smaller Image Sizes: By copying only the necessary files to the final stage, you can significantly reduce image size.
+    -Improved Build Performance: Separating build steps can improve performance, especially for large applications.
+    -Enhanced Security: Limiting the final image to essential components reduces the attack surface.
+    -Better Organization: Multi-stage builds help organize your Dockerfile into logical stages.
+
+Additional Considerations
+    -Caching: Docker caches intermediate build stages to improve performance.
+    -Best Practices: Use clear stage names and comments to make your Dockerfile easier to understand.
+    -Environment Variables: Consider using environment variables to configure your build stages.
+    -Build Arguments: Use build arguments to customize your build process.
+
+    
+By effectively using multi-stage builds, you can optimize your Docker images and streamline your development and deployment workflows.
 
 
 

@@ -84,11 +84,22 @@ What Happens if Any Request Fails?
 Summary
   switchMap: Switches to a new Observable and cancels the previous one. If an inner Observable fails, the entire operation fails.
   mergeMap: Merges multiple Observables concurrently. If any fails, the whole operation fails.
-  forkJoin: Waits for all Observables to complete and emits the final result. Fails if any Observable fails.
-  combineLatest: Emits the latest values from all Observables whenever any of them emits. Fails if any Observable fails.
   concatMap: Maps and executes Observables sequentially. Fails if any Observable fails.
   exhaustMap: Ignores new emissions until the current Observable completes. Fails if the inner Observable fails.
-foo$ = from([1,2,3,4,5]).pipe(map((d)=> d*10)) //\
+  
+  forkJoin: Waits for all Observables to complete and emits the final result. Fails if any Observable fails.
+  combineLatest: Emits the latest values from all Observables whenever any of them emits. Fails if any Observable fails.
+  
+
+  
+  mergeMap
+  flatMap:
+  concatMap
+  switchMap
+   exhaustMap
+
+   
+  foo$ = from([1,2,3,4,5]).pipe(map((d)=> d*10)) //\
 
 output
 10
@@ -116,7 +127,7 @@ output
     4
     mergeMap Completed
 
-    example(flatMap)
+    example(flatMap)(old version of mergeMap)
 
     outplut: no delay for out , out put give simaniuslly
     0
@@ -147,11 +158,6 @@ output
     0
     exhaustMap Completed
 
-  mergeMap
-  flatMap:
-  concatMap
-  switchMap
-   exhaustMap
 
 
 
