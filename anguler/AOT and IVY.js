@@ -1,7 +1,7 @@
 /*
 
 <!----> Exact difference between AOT and IVY?
-Angular Ivy is the new default rendering engine.
+Angular Ivy is the new defaultz.
 Starting from version 9 of Angular, your TypeScript code will be compiled using Ivy instead of the older ViewEngine (VE).
 Basically, Ivy decreases your bundle sizes, enhances testing, and improves debugging capabilities. In addition, Ivy uses Ahead-of-Time compilation to speed up your apps.
 To summarise -
@@ -19,6 +19,10 @@ AOT refers to when the compilation occurs—during build time, rather than at ru
 Real difference would be between -
 
 Ivy vs ViewEngine(VE)
+    ViewEngine is the older rendering engine, with less optimized performance, larger bundle sizes, and less effective tree-shaking. It was the standard up until Angular 8.
+    Ivy is the newer, default rendering engine starting from Angular 9, offering better performance, smaller bundles, improved debugging, and more advanced features. Ivy is the future of Angular, with ongoing enhancements being made to this engine.
+
+
 AOT vs JIT 
 
     1. JIT (Just-in-Time Compilation)

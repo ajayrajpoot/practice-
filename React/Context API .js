@@ -40,3 +40,49 @@ Key Points:
     useContext: A hook that allows you to access context data in functional components easily
 
     
+
+    import React, { createContext, useContext, useState } from 'react';
+
+const MyContext = createContext();
+
+function MyProvider({ children }) {
+  const [value, setValue] = useState('initial value');
+
+  const changeValue = (newValue) => setValue(newValue);
+
+  return (
+    <MyContext.Provider value={{ value, changeValue }}>
+      {children}
+    </MyContext.Provider>
+  );
+}
+
+function useMyContext() {
+  const context = useContext(MyContext);
+  if (!context) {
+    throw new Error('useMyContext must be used within a MyProvider');
+  }
+  return context;
+}
+
+function ChildComponent() {
+  const { value, changeValue } = useMyContext();
+
+  return (
+    <div>
+      <p>{value}</p>
+      <button onClick={() => changeValue('new value')}>Change Value</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <MyProvider>
+      <ChildComponent />
+    </MyProvider>
+  );
+}
+
+
+*/

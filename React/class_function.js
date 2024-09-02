@@ -90,3 +90,17 @@ Choosing the Right Approach:
           </div>
         );
       }
+
+      /*
+      Why Function Components are Preferred
+Simplicity: Function components are simpler and easier to read. There's no need to deal with this keyword, which can often be confusing in class components.
+
+Hooks: The introduction of hooks like useState, useEffect, useContext, etc., has made function components powerful. You can now handle state, side effects, context, refs, and more in function components.
+
+Performance: Function components are generally more lightweight and perform better in some cases, especially with React's optimizations like the automatic batching of updates.
+
+Consistency: The React team and community have been advocating for the use of function components and hooks as the primary way to write components. This is reflected in the documentation, tutorials, and new features.
+
+Future-Proof: The React ecosystem is moving towards function components. New features and patterns are being developed with function components in mind. For example, React Server Components are designed to work with function components.
+
+*/

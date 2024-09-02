@@ -1,10 +1,12 @@
 /**
- * What is interceptor in Angular interview questions?In Angular, interceptors are classes that can be used to intercept 
- * and manipulate HTTP requests and responses. They provide a way to modify or handle HTTP requests globally before they 
- * are sent to the server or to modify the HTTP responses before they are delivered to the calling code. 
- * Interceptors are useful for tasks like adding authentication headers, logging, error handling, caching, and more. 
- * To create an interceptor in Angular, you need to implement the HttpInterceptor interface and define the logic for 
- * intercepting requests and responses.
+ * What is interceptor in Angular interview questions?
+    In Angular, interceptors are classes that can be used to intercept and manipulate HTTP requests and responses. They provide a way to modify or handle HTTP requests globally before they are sent to the server or to modify the HTTP responses before they are delivered to the calling code.
+
+ 
+    Interceptors are useful for tasks like adding authentication headers, logging, error handling, caching, and more. 
+
+    To create an interceptor in Angular, you need to implement the HttpInterceptor interface and define the logic for intercepting requests and responses.
+    
 Here’s an example of an HTTP interceptor that adds an authorization header to outgoing requests:
 
 

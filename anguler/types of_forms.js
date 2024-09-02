@@ -1,5 +1,7 @@
 /**12. What are the types of forms available in Angular ? Explain with syntax.
+ * 
 In Angular, there are different types of forms available for handling user input and performing validation. The two main types of forms in Angular are Template-driven forms and Reactive forms.
+
 Template-driven Forms: — Template-driven forms are primarily defined within the HTML template of the component using Angular directives. — The form controls and validation rules are inferred from the template, reducing the need for explicit form control declaration in the component code. — Template-driven forms are suitable for simple forms with basic validation requirements.
 Syntax:
  <form #myform="ngForm" (ngsubmit)="onSubmit()">
@@ -12,6 +14,7 @@ Syntax:
      <button type="submit">Submit</button>
    </form>
 In the example above, ngForm is a directive that represents the entire form. Each input element uses the ngModel directive for two-way data binding and includes additional directives like required and email for validation.
+
 2. Reactive Forms: —
 Reactive forms are created programmatically in the component class using TypeScript. — Form controls are explicitly defined in the component code, providing more control and flexibility. — Reactive forms are suitable for complex forms with dynamic validation requirements and advanced interactivity.
 Syntax:

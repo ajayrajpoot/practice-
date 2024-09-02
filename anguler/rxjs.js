@@ -61,6 +61,7 @@ interval(100).pipe(
   () => console.log('Complete')
 );
 In this example, the interval Observable emits a value every 100 milliseconds. The bufferTime operator collects the emitted values into an array and emits the array every 1000 milliseconds.
+
 2. throttle: The throttle operator throttles the emissions of the source Observable by discarding emissions that occur within a specified time window. It can be used to limit the rate of emissions from the source Observable.
 Here is an example:
  import { interval } from 'rxjs';
@@ -74,6 +75,7 @@ interval(100).pipe(
   () => console.log('Complete')
 );
 In this example, the interval Observable emits a value every 100 milliseconds. The throttleTime operator discards emissions that occur within 1000 milliseconds of the previous emission.
+
 3. debounce: The debounce operator delays emissions from the source Observable until a specified time has elapsed since the last emission. It can be used to filter out rapid emissions and emit only the last value.
 Here is an example:
  import { fromEvent } from 'rxjs';
@@ -87,6 +89,7 @@ fromEvent(document, 'keyup').pipe(
   () => console.log('Complete')
 );
 In this example, the fromEvent Observable emits a value every time a key is released on the document. The debounceTime operator delays emissions until 1000 milliseconds have elapsed since the last emission.
+
 4. sample: The sample operator emits the most recent value from the source Observable at a specified time interval. It can be used to emit the most recent value at a regular interval, regardless of how many values are emitted.
 Here is an example:
  import { interval } from 'rxjs';
@@ -100,6 +103,7 @@ interval(100).pipe(
   () => console.log('Complete')
 );
 In this example, the interval Observable emits a value every 100 milliseconds. The sampleTime operator emits the most recent value at 1000 millisecond intervals.
+
 5. switchMap: The switchMap operator can be used to limit the number of concurrent emissions from the source Observable.
 Here’s an example of using switchMap to implement backpressure:
  import { from, interval } from 'rxjs';

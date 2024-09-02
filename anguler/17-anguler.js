@@ -46,7 +46,7 @@ export class AppComponent {
 
 The most waited feature: defer
 
-Of course, we could do this before. Thanks to EsModules and the *ngComponentOutlet structural directive, it was possible to lazyload our components. However, this technique remains a source of error, in the sense that the developer has to think about the whole loading process (loading, error, etc.) and is limited in scope (complicated prefetching, etc.). In short, the developer experience wasn't there.
+  Of course, we could do this before. Thanks to EsModules and the *ngComponentOutlet structural directive, it was possible to lazyload our components. However, this technique remains a source of error, in the sense that the developer has to think about the whole loading process (loading, error, etc.) and is limited in scope (complicated prefetching, etc.). In short, the developer experience wasn't there.
 
 With Angular 17, defer comes to the rescue, making it easy to lazyload our components by taking into account all the stages of lazyloading.
 @Component({

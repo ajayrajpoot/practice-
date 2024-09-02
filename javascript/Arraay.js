@@ -57,7 +57,7 @@ var slicedArr = arr.slice(1, 4); // slicedArr is [2, 3, 4]
 var arr = [1, 2, 3, 4, 5];
 arr.splice(2, 1, 'a', 'b'); // arr is now [1, 2, 'a', 'b', 4, 5]
 
-// 9. indexOf(searchElement, fromIndex)
+// 9. indexOf(searchElement,  )
 // Returns the first index at which a given element can be found in the array, or -1 if it is not present.
 // Example:
 var arr = [1, 2, 3, 2, 5];

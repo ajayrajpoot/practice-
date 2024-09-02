@@ -12,7 +12,7 @@ How It Works:
     Example:
 
     javascript
-    Copy code
+    
         import React, { useState } from 'react';
 
         function ControlledForm() {

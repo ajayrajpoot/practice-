@@ -92,12 +92,41 @@ Summary
   
 
   
-  mergeMap
-  flatMap:
-  concatMap
-  switchMap
-   exhaustMap
+  mergeMap :no delay for out , out put give simultaneously
+  flatMap: no delay for out , out put give simultaneously (old version of mergeMap )
+  concatMap : run one by one , return previous is compleat, return all values
+  switchMap : run one by one , wait for previous complete, and cancel previous one, return leatest value , single value
+   exhaustMap: run one by one ,all next obsebable ignore, fist observable reurn value only 
+   ----------------------------
+1. mergeMap and flatMap
+  Behavior: These operators map each emitted value to an inner Observable and then merge the output of these inner Observables.
+  Error Handling: If any of the inner Observables throws an error, the error is immediately propagated downstream, and the entire Observable sequence is terminated. The error effectively cancels all other active inner Observables.
+2. concatMap
+  Behavior: This operator maps each emitted value to an inner Observable and then concatenates the output of these inner Observables, ensuring the sequence is maintained.
+  Error Handling: Similar to mergeMap, if an error occurs in any inner Observable, it is immediately propagated downstream, terminating the sequence. The error halts further emissions and processing.
+3. switchMap
+  Behavior: This operator maps each emitted value to an inner Observable but unsubscribes from the previous inner Observable if a new value is emitted, switching to the latest Observable.
+  Error Handling: If an error occurs in the current active inner Observable, it is immediately propagated downstream, and the entire Observable sequence is terminated. No further switches or emissions occur after the error.
+4. exhaustMap
+  Behavior: This operator maps each emitted value to an inner Observable but ignores new emissions until the current inner Observable completes.
+  Error Handling: If the current inner Observable throws an error, that error is propagated downstream, and the sequence is terminated. The error stops the processing of any further emissions.
 
+
+  1. forkJoin
+  Behavior: forkJoin waits for all of its source Observables to complete, then combines their last emitted values into a single array or object.
+
+  Error Handling:
+  If any source Observable throws an error: The error is immediately propagated downstream, and forkJoin terminates without emitting any values. This means that even if other source Observables have successfully completed, the error will prevent forkJoin from emitting the combined result.
+  Summary: forkJoin fails immediately if any of its source Observables fails, and no value is emitted.
+
+2. combineLatest
+  Behavior: combineLatest emits an array or object of the latest values from each source Observable whenever any of them emits a new value. This happens after each source Observable has emitted at least one value.
+
+  Error Handling:
+  If any source Observable throws an error: The error is immediately propagated downstream, and the entire combineLatest sequence terminates. No further emissions occur, even if some source Observables are still active.
+  
+  Summary: combineLatest also fails immediately if any of its source Observables fails, terminating the entire sequence.
+------------------------------------------------------------  
    
   foo$ = from([1,2,3,4,5]).pipe(map((d)=> d*10)) //\
 
@@ -107,7 +136,7 @@ output
 30
 40
 50
-
+----------------------------------------------------------
   const example = (operator:any)=>{
       from([0,1,2,3,4])
         .pipe(operator((x:any)=> of(x).pipe(delay(500) ) ))
@@ -119,7 +148,7 @@ output
     }
       
     example(mergeMap)
-    outplut: no delay for out , out put give simaniuslly
+    outplut: no delay for out , out put give simultaneously
     0
     1
     2
@@ -127,18 +156,23 @@ output
     4
     mergeMap Completed
 
+    throw Error
+      - Error Propagation: If a mergeMap observable throws an error, the error will be propagated to the outer observable's error handler.
+      - Other Observables Continue: Other inner observables that are currently subscribed to will continue to emit values.
+      - Subscription Cancellation: The subscription to the observable that threw the error will be canceled.
+--------------------------------------------------------
     example(flatMap)(old version of mergeMap)
 
-    outplut: no delay for out , out put give simaniuslly
+    output: no delay for out , out put give simultaneously
     0
     1
     2
     3
     4
     flatMap Completed
-
+--------------------------------------------------------------------
     example(concatMap)
-    outplut: return one by one , return previous is copleat
+    output: return one by one , return previous is compleat
     0
     1
     2
@@ -148,13 +182,13 @@ output
 
     
     example(switchMap)
-    outplut: return one by one ,wait for pevious, and cancel previous one
+    output: return one by one ,wait for previous, and cancel previous one
     4
     switchMap Completed
 
     
     example(exhaustMap)
-    outplut: return one by one ,all next obsebale ignor, and cancel previous one
+    outplut: run one by one ,all next obsebable ignor, and cancel previous one
     0
     exhaustMap Completed
 
@@ -196,3 +230,6 @@ output
   ]).pipe(([users, username.fiteredUsers]) =>({
     users, username.fiteredUsers
     }))
+
+
+    */
