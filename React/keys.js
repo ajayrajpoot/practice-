@@ -9,6 +9,7 @@ Why are keys important?
 How do keys work?
 
     Keys should be unique among siblings, meaning that each element in a list should have a distinct key. A key is often derived from an element’s unique identifier, such as an ID from the database, or can be the index of the element in the array (though using indices is generally discouraged unless items are static and won't change).
+    
 Best Practices for Using Keys:
 
     -Avoid using array indexes as keys unless the list is static, has no items that are added or removed, and the order of items does not change. Using indexes can lead to issues with state and component reusability.

@@ -120,6 +120,7 @@ In this example, forkJoin takes an array of observables, including two observabl
 
 4. combineLatest: This operator combines the latest values from multiple observables into a single observable. It emits an array of the latest values whenever any of the source observables emit a new value.
 Example:
+
  import { combineLatest, interval } from 'rxjs';
   const observables = [
      of(1,2,3,4),
@@ -135,6 +136,7 @@ Example:
 // [4, 10]
 // [4,11]
 // [4,12]
+
 If our observable is as shown below :
  const observables = [
     of(1,2,3,4).pipe(delay(500)), 

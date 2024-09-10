@@ -7,7 +7,7 @@ What is the Context API?
 The Context API is a built-in feature of React that allows you to create a "context" to store data that can be accessed by any component in your component tree, without the need to pass props down manually through each intermediate component.
 
 const MyContext = React.createContext();
-
+export default MyContext;
 
 function App() {
   const user = { name: "Alice", age: 25 };
@@ -32,8 +32,6 @@ function ChildC() {
   const user = useContext(MyContext);
   return <p>{user.name}</p>;
 }
-
-
 
 Key Points:
     Context: Used to create a way to pass data through a component tree without prop drilling.
