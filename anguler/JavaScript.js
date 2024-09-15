@@ -10,5 +10,5 @@ Is JavaScript actually asynchronous?
 
 
 Is JS for loop sync or async?
-By default, the for loop is synchronous, meaning that each iteration will wait for the previous iteration to complete before starting. In this example, the loop starts with i equal to 1 and increments i by 1 each time through the loop until i is equal to 10.
+    By default, the for loop is synchronous, meaning that each iteration will wait for the previous iteration to complete before starting. In this example, the loop starts with i equal to 1 and increments i by 1 each time through the loop until i is equal to 10.
  */

@@ -27,6 +27,7 @@ The child_process module provides several methods to create and interact with ch
     });
 
 2. execFile()
+
   Purpose: Executes a file directly without a shell.
   Use Case: Useful for running binaries or scripts with arguments.
 
@@ -46,11 +47,13 @@ The child_process module provides several methods to create and interact with ch
 
 3. spawn()
 
-  Purpose: Launches a new process with a given command.
-    This method doesn’t generate a new V8 instance, and only a single copy of the node module is active on the processor.
+Purpose: spawn() is used to launch a new process with a specific command. It is ideal for long-running processes or streaming data.
+Use Case: Running system commands, external scripts, or any executable that produces output over time.
+Non-blocking: The spawn() method returns a stream of data (stdin, stdout, stderr), making it non-blocking.
 
+This method doesn’t generate a new V8 instance, and only a single copy of the node module is active on the processor.
 
-  Use Case: Useful when you need to handle large outputs or interact with the process via streams (stdin, stdout, stderr).
+Use Case: Useful when you need to handle large outputs or interact with the process via streams (stdin, stdout, stderr).
 
   Example:
   
@@ -71,9 +74,13 @@ The child_process module provides several methods to create and interact with ch
     });
 
 4. fork()
-  Purpose: A special case of spawn() specifically for spawning new Node.js processes. It provides an easy way to send messages between the parent and child processes using IPC (Inter-Process Communication).
+  Purpose: fork() is a special case of spawn() designed specifically to spawn new Node.js processes. It allows the parent process and child process to communicate via messages (IPC - Inter-Process Communication).
+  Use Case: Running multiple Node.js processes to handle CPU-intensive tasks, enabling load distribution, or creating worker processes.
+  IPC: fork() provides a built-in communication channel (via send() and on('message')) between the parent and child processes.
+
 
   fork() is a particular case of spawn() that generates a new instance of a V8 engine. Multiple workers run on a single node code base for multiple tasks.
+  
   The Fork method in Node.js creates a new child process that runs a separate Node.js instance and can be useful for running CPU-intensive tasks or creating a cluster of Node.js servers.
 
   Use Case: Useful for running another Node.js script or splitting a Node.js application into multiple processes.
@@ -91,16 +98,15 @@ The child_process module provides several methods to create and interact with ch
 
 
 -- spawn
-Spawn() launches a new process with the available set of commands.
+  Spawn() launches a new process with the available set of commands.
 
 ---fork
-fork() is a particular case of spawn() that generates a new instance of a V8 engine.
-Multiple workers run on a single node code base for multiple tasks.
+  fork() is a particular case of spawn() that generates a new instance of a V8 engine.
+  Multiple workers run on a single node code base for multiple tasks.
 
 
-fork- The Fork method in Node.js creates a new child process that runs a separate Node.js 
-instance and can be useful for running CPU-intensive tasks or creating a cluster of Node.js servers.
-
+  spawn() runs a command as a child process, often used for non-Node.js scripts or system commands.
+  fork() is used to create a new Node.js process, with built-in communication channels for parent-child processes.
 
  */
 

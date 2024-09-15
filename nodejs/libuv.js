@@ -8,7 +8,5 @@ libuv is a C library that is used to abstract non-blocking I/O operations to a c
  
 
 I/O operations ?
-The I/O model in Node. js is a non-blocking event loop. This means that when you call a function that performs I/O, 
-it will not block the execution of your code. Instead, it will return immediately and lets you continue executing other 
-parts of your code while the I/O operation is performed in the background.
+    The I/O model in Node. js is a non-blocking event loop. This means that when you call a function that performs I/O, it will not block the execution of your code. Instead, it will return immediately and lets you continue executing other parts of your code while the I/O operation is performed in the background.
 */

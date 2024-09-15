@@ -29,7 +29,7 @@ MongoDB has inbuilt support for data partitioning (Sharding).
 Sharding is a method for distributing a single dataset across multiple databases, which can then be stored on multiple machines. This allows for larger datasets to be split into smaller chunks and stored in multiple data nodes, increasing the total storage capacity of the system.
 
 
-2. What is a Document in MongoDB?
+2. What is a Document in MongoDB ?
 A Document in MongoDB is an ordered set of keys with associated values. It is represented by a map, hash, or dictionary. In JavaScript, documents are represented as objects:
 {"greeting" : "Hello world!"}
 
@@ -69,5 +69,15 @@ Aggregation: It provides an aggregation framework based on the concept of data p
 Special collection and index types: It supports time-to-live (TTL) collections for data that should expire at a certain time
 File storage: It supports an easy-to-use protocol for storing large files and file metadata.
 Sharding: Sharding is the process of splitting data up across machines.
+
+
+...> In summary,  the _id field is a critical part of MongoDB's architecture, and it cannot be deleted or modified once set. If you need to work with data in ways that don't involve the _id field, consider using aggregation pipelines or other schema design approaches.
+
+
+
+
+
+
+
 
 

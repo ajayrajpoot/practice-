@@ -5,6 +5,7 @@
 const testSchema = new mongoose.Schema({
   name: String
 });
+
 testSchema.pre('deleteOne', { document: true, query: false }, async function() {
   console.log(this instanceof mongoose.Document); // true
 });

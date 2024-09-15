@@ -1,9 +1,8 @@
 /**
  * Architecture
-    Angular is a full-fledged model-view-controller (MVC) framework. It provides clear guidance on how the application should be structured and offers 
-    bi-directional data flow while providing real DOM. 
+    Angular is a full-fledged model-view-controller (MVC) framework. It provides clear guidance on how the application should be structured and offers bi-directional data flow while providing real DOM. 
 
-Modules, components, Templates, Services, Dependency Injection, Metadata, bootstrap mechanism
+   Modules, components, Templates, Services, Dependency Injection, Metadata, bootstrap mechanism
 
 1. Modules
    Definition: Modules are the foundational building blocks of an Angular application. They help organize an application into cohesive blocks of functionality. Each Angular application has at least one module, the root module, typically named AppModule, which provides the bootstrap mechanism to launch the application.
@@ -102,6 +101,7 @@ Modules, components, Templates, Services, Dependency Injection, Metadata, bootst
          }
       }
 6. Metadata
+
    Definition: Metadata in Angular is data about data. It tells Angular how to process a class, what it represents, and how to configure it. Metadata is attached to a class using decorators like @Component, @NgModule, @Injectable, etc.
 
    Purpose: Metadata provides Angular with the necessary information to understand what a class should represent and how it should be used in the application.

@@ -6,6 +6,7 @@ What are keys?
 Why are keys important?
 
     Keys are crucial for efficient updating of the user interface. When rendering a list, React uses keys to determine which elements can be reused and which need to be recreated. This improves performance by minimizing re-rendering.
+    
 How do keys work?
 
     Keys should be unique among siblings, meaning that each element in a list should have a distinct key. A key is often derived from an element’s unique identifier, such as an ID from the database, or can be the index of the element in the array (though using indices is generally discouraged unless items are static and won't change).

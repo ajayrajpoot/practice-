@@ -37,8 +37,7 @@ These are some of the key features and benefits of Angular. Angular is a powerfu
 Please note that this is a general overview of the key features and benefits of Angular. Angular is a highly customizable and extensible framework, and its features and benefits can vary depending on your specific requirements and preferences.
 
 Is javascript compiled or interpreted language?
- the answer is that it is a bit of both. It is interpreted in older browsers, but in modern browsers, 
- it is compiled with the help of a JIT compiler.
+ the answer is that it is a bit of both. It is interpreted in older browsers, but in modern browsers, it is compiled with the help of a JIT compiler.
 
 
 1. debounce
@@ -47,10 +46,7 @@ with the purpose of not firing all the time the event gets fired but instead whe
 Typically after a whole word has been typed, or a drag or resize sequence has ended.
 
 2. throttle
-we throttle a function that should fire while a series of events is happening, but when we want to control the amount of 
-times it gets called. Like in a drag movement we want the function to be called only every x pixels of distance, or only 
-every 100ms, and not every time the event is fired. So the throttle function is called while the series of events is happening, 
-just fewer times.
+we throttle a function that should fire while a series of events is happening, but when we want to control the amount of times it gets called. Like in a drag movement we want the function to be called only every x pixels of distance, or only every 100ms, and not every time the event is fired. So the throttle function is called while the series of events is happening, just fewer times.
 
 
 3.

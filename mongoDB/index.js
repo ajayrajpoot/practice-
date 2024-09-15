@@ -1,3 +1,5 @@
+/*
+
 db.myColl.createIndex( { score: 1, price: 1, category: 1 }, { collation: { locale: "fr" } } )
 db.pets.getIndexes()
 db.pets.unhideIndex("idx_weight_-1")
@@ -36,5 +38,6 @@ $project: {  truncated: { $trunc: [ "$data", 0 ] } }
 result: { $split: [ "$data", ", " ] }
 result: { $slice: [ "$data", 3 ] }
 result: { $slice: [ "$data", 10, 3 ] }
-$group: {  totalAmount: { $sum: { $multiply: [ "$price", "$quantity" ] } }, }
+$group: {  _id:null,totalAmount: { $sum: { $multiply: [ "$price", "$quantity" ] } }, }
 
+*/

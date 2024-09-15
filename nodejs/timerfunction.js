@@ -69,30 +69,35 @@ Promise Resolved
 /**------------------
  * 
 Timers Methods
-Method	Description
-clearImmediate()	Cancels an Immediate object
-clearInterval()	Cancels an Interval object
-clearTimeout()	Cancels a Timeout object
-ref()	Makes the Timeout object active. Will only have an effect if the Timeout.unref() method has been called to make the Timeout object inactive.
-setImmediate()	Executes a given function immediately.
-setInterval()	Executes a given function at every given milliseconds
-setTimeout()	Executes a given function after a given time (in milliseconds)
-unref()	Stops the Timeout object from remaining active.
+
+    clearImmediate() Cancels an Immediate object
+    clearInterval()	Cancels an Interval object
+    clearTimeout()	Cancels a Timeout object
+
+    ref()	Makes the Timeout object active. Will only have an effect if the Timeout.unref() method has been called to make the Timeout object inactive.
+    unref()	Stops the Timeout object from remaining active.
+
+    setImmediate()	Executes a given function immediately.
+    setInterval()	Executes a given function at every given milliseconds
+    setTimeout()	Executes a given function after a given time (in milliseconds)
 
 
-const myInterval = setInterval(() => { console.log("setInterval"); }, 1000);
-clearInterval(myInterval);
+    const myInterval = setInterval(() => { console.log("setInterval"); }, 1000);
+    clearInterval(myInterval);
 
-const myTimeout = setTimeout(() =>{ console.log( "Happy Birthday to You !!"); }, 3000);
-clearTimeout(myTimeout);
+    const myTimeout = setTimeout(() =>{ console.log( "Happy Birthday to You !!"); }, 3000);
+    clearTimeout(myTimeout);
 
 
-setImmediate() and setTimeout() are similar, but behave in different ways depending on when they are called.
+    setImmediate() and setTimeout() are similar, but behave in different ways depending on when they are called.
 
-setImmediate() is designed to execute a script once the current poll phase completes.
-setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.
+    setImmediate() is designed to execute a script once the current poll phase completes.
+    setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.
+
+    Both setImmediate() and setTimeout() return a timer object that can be used to cancel the timer.
+
 The order in which the timers are executed will vary depending on the context in which they are called. If both are called from within the main module, then timing will be bound by the performance of the process (which can be impacted by other applications running on the machine).
 
 
-
+*/
 

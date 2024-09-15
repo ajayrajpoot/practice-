@@ -1,28 +1,28 @@
 /*
 
 1. Database Commands
-View all databases
-> show dbs
+    View all databases
+    > show dbs
 
-Create a new or switch databases 
-> use dbName
+    Create a new or switch databases 
+    > use dbName
 
-View current Database
->db
+    View current Database
+    >db
 
-Delete Database 
-> db.dropDatabase()
+    Delete Database 
+    > db.dropDatabase()
 
 2. Collection Commands
 
-Show Collections
->show collections
+    Show Collections
+    >show collections
 
-Create a collection named 'comments'
->db.createCollection('comments')
+    Create a collection named 'comments'
+    >db.createCollection('comments')
 
-Drop a collection named 'comments'
->db.comments.drop()
+    Drop a collection named 'comments'
+    >db.comments.drop()
 
 3. Row(Document) Commands
 
@@ -100,3 +100,4 @@ Less than/Greater than/ Less than or Eq/Greater than or Eq
 db.absences.renameCollection("absences1")
 db.students.updateMany( {}, { $rename: { "nmae": "name" } } )
 
+*/

@@ -1,15 +1,16 @@
 /**
  * Object-Oriented Programming is a programming style based on classes and objects. These group data (properties) and methods (actions) inside a box.
  * 
- * OOP was developed to make code more flexible and easier to maintain.
+ OOP was developed to make code more flexible and easier to maintain.
 
 What is a Class?
-You can think of a class like a blueprint of a house. A class is not a real world object but we can create objects from a class. It is like an template for an object.
-We can create classes using the class keyword which is reserved keyword in JavaScript. Classes can have their own properties and methods
+    You can think of a class like a blueprint of a house. A class is not a real world object but we can create objects from a class. It is like an template for an object.
+
+    We can create classes using the class keyword which is reserved keyword in JavaScript. Classes can have their own properties and methods
 
 
 What is an Object?
-An object is an instance of a class. Now with the help of the house class we can construct a house. We can construct multiple houses with the help of same house class.
+    An object is an instance of a class. Now with the help of the house class we can construct a house. We can construct multiple houses with the help of same house class.
 
 class Student{
     // Data (Properties)
@@ -88,6 +89,7 @@ There are 4 main principles in OOP, and they are:  inheritance, polymorphism, an
         1.Public Methods (start() and stop()):
 
             These methods are accessible from outside the class. As a user of the Car class, you only need to know about these methods to start or stop the car.
+            
         2.Private Methods (#startEngine() and #stopEngine()):
 
             These methods are marked as private by using the # symbol (a feature in modern JavaScript). They contain the complex logic of starting and stopping the engine, but this logic is hidden from the user. The user doesn’t need to worry about how the engine starts; they just use the start() method.

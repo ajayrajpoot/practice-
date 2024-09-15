@@ -6,6 +6,6 @@
  */
 
 /**
- * Q6: What is control flow function?
+ * Q6: What is control flow ?
 It is a generic piece of code which runs in between several asynchronous function calls is known as control flow function.
  */

@@ -1,7 +1,15 @@
-/*17. How do you handle errors in RxJS observables ?
+/*
+
+NgRx is a state management library for Angular applications, based on the principles of Redux (a popular state management pattern for JavaScript applications). It allows developers to manage the application state in a predictable and scalable way by using a unidirectional data flow. This is especially useful in large, complex applications where managing and sharing state between components can become challenging.
+
+NgRx leverages RxJS to manage side effects and asynchronous tasks. The main components of NgRx include Actions, Reducers, Selectors, and Effects.
+
+
+17. How do you handle errors in RxJS observables ?
 RxJS provides several operators for handling errors in Observables. The two main operators for error handling are catchError and retry.
 catchError: The catchError operator is used to catch errors that may occur in an Observable and handle them in a graceful way. It takes a function as an argument that returns another Observable or throws an error. If the function returns an Observable, the source Observable will be replaced with the returned Observable. If the function throws an error, the error will be propagated to the subscriber.
 Here is an example:
+
  import { of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
@@ -22,6 +30,7 @@ of(1, 2, 3).pipe(
   () => console.log('Complete')
 );
 In this example, the map operator throws an error when it encounters the number 2. The catchError operator catches the error and logs the error message to the console. It then replaces the source Observable with a new Observable that emits the numbers 4, 5, and 6.
+
 2. retry: The retry operator is used to automatically retry an Observable when it encounters an error. It takes an optional argument that specifies the maximum number of retries.
 Here is an example:
  import { of } from 'rxjs';

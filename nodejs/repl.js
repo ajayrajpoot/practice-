@@ -11,13 +11,13 @@
  loops reat evaluate and print unti the 
  user pree control C two times some 
  common REPL examples are dot health then 
- dot clear then 
- dot brack
- dot save 
- dot load
- and ctrl C to temnate the current
- command and control doubles C to 
- terminate the or come out of reppl 
+    dot clear then 
+    dot brack
+    dot save 
+    dot load
+    and ctrl C to temnate the current
+    command and control doubles C to 
+    terminate the or come out of reppl 
  
  
  

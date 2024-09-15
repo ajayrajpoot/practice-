@@ -1,6 +1,7 @@
 /*
 What is a difference between compiler and interpreter?
 Compiler: A compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code before the program runs. 
+
 Interpreter: An interpreter translates code written in a high-level programming language into machine code line-by-line as the code runs.
 
 What is the difference between a compiled language and an interpreter?

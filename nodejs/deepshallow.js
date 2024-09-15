@@ -8,7 +8,6 @@ Shallow copy is a bit-wise copy of an object. A new object is created that has a
 Deep copy
 A deep copy copies all fields, and makes copies of dynamically allocated memory pointed to by the fields. A deep copy occurs when an object is copied along with the objects to which it refers.
 
-
 var employeeDetailsDuplicate = employeeDetailsOriginal; //Shallow copy!
 employeeDetailsDuplicate.name = 'NameChanged'; // this will change employeeDetailsOriginal value also
 
@@ -43,13 +42,14 @@ Let’s see how the two differ.
 
 Primitives are all the data types except objects. That means:
 
-Boolean
-Null
-Undefined
-String
-Number
-Bigint
-Symbol
+  Boolean
+  Null
+  Undefined
+  String
+  Number
+  Bigint
+  Symbol
+
 Primitives are immutable (they do not have methods or properties that can alter them).
 
 Objects are all other JavaScript elements, such as object literals, arrays, dates, 

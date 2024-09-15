@@ -1,6 +1,7 @@
+/*
 insertOne() and insertMany()
 find() and findOne().  second parameter called projection.
-updateOne() or updateMany(,  , {upsert: true}) , upsert-> insert the document if  found.
+updateOne() or updateMany({},{} , {upsert: true}) , upsert-> insert the document if  found.
 deleteOne() or deleteMany().
 
 $inc
@@ -107,3 +108,4 @@ db.createCollection("log", { capped : true, size : 5242880, max :
 db.collection.isCapped()
 db.runCommand({"convertToCapped": "mycoll", size: 100000});
 
+*/

@@ -1,20 +1,20 @@
-// Here's an expanded example of Redux with:
+/*
+ Here's an expanded example of Redux with:
+  - Multiple actions
+  - Passing values with actions
+  - Multiple reducers
 
-// - Multiple actions
-// - Passing values with actions
-// - Multiple reducers
+ Counter App with User
 
-// Counter App with User
+Components:
 
-// Components:
+1. Counter.js (React Component)
+2. User.js (React Component)
+3. actions.js (Action Creators)
+4. reducers.js (Combined Reducers)
+5. store.js (Redux Store)
 
-// 1. Counter.js (React Component)
-// 2. User.js (React Component)
-// 3. actions.js (Action Creators)
-// 4. reducers.js (Combined Reducers)
-// 5. store.js (Redux Store)
-
-// Code:
+Code:
 
 // actions.js
 

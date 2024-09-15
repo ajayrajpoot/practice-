@@ -16,8 +16,9 @@ var test = obj.prop.getFullname;
 console.log(test());
 
  /**
-  * Aurelio De Rosa
- John Doe
+
+Aurelio De Rosa
+undefined
   */
 
 

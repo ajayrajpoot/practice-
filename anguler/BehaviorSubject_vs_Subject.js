@@ -1,8 +1,20 @@
 /*
 ---------BehaviorSubject vs. Subject-------------------
 
+Observable?
+    An Observable is a data stream that can emit values over time, allowing for reactive programming. It's similar to promises but more powerful because it can:
 
+        - Emit multiple values over time (streams of data).
+        - Be canceled before completing.
+        - Handle complex asynchronous operations.
 
+    An Observable can emit three types of notifications:
+
+        - Next: Emits the next value in the sequence.
+        - Error: Emits an error and stops further emissions.
+        - Complete: Emits that the stream is complete and no further values will be emitted.
+
+        
 BehaviorSubject
     Initial Value: A BehaviorSubject requires an initial value when it is created. This value is emitted immediately to any new subscribers, even if no subsequent next calls have been made.
 
@@ -69,10 +81,10 @@ Summary of Differences
 
         // Creating an observable that emits values 1, 2, 3 over time
         const myObservable = new Observable<number>(subscriber => {
-        subscriber.next(1); // Emit value 1
-        subscriber.next(2); // Emit value 2
-        subscriber.next(3); // Emit value 3
-        subscriber.complete(); // Signal that the observable is complete
+            subscriber.next(1); // Emit value 1
+            subscriber.next(2); // Emit value 2
+            subscriber.next(3); // Emit value 3
+            subscriber.complete(); // Signal that the observable is complete
         });
 
 

@@ -80,6 +80,21 @@ var newStr = str.replace("world", "JavaScript"); // "Hello, JavaScript!"
 // 9. slice(startIndex, endIndex)
 var str = "Hello, world!";
 var slicedStr = str.slice(7, 12); // "world"
+var fruits = ['apple', 'banana', 'orange', 'mango', 'grape'];
+var slicedFruits = fruits.slice(1, 3); // [ 'banana', 'orange' ]
+console.log(slicedFruits); // [ 'banana', 'orange' ]
+console.log(fruits); // [ 'apple', 'banana', 'orange', 'mango', 'grape' ] (original array remains unchanged)
+
+
+
+var colors = ['red', 'green', 'blue', 'yellow', 'pink'];
+var removedColors = colors.splice(2, 2); // Removes 2 elements starting from index 2
+console.log(removedColors); // [ 'blue', 'yellow' ]
+console.log(colors); // [ 'red', 'green', 'pink' ] (original array is modified)
+
+var colors = ['red', 'green', 'pink'];
+colors.splice(2, 0, 'blue', 'yellow'); // Adds 'blue' and 'yellow' at index 2
+console.log(colors); // [ 'red', 'green', 'blue', 'yellow', 'pink' ] (array is modified)
 
 
 //split(separator, limit)

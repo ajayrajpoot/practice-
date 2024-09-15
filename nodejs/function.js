@@ -75,9 +75,9 @@ In Node.js, functions are a fundamental part of the language, and they come in v
     Generator functions are special functions that can be paused and resumed, allowing for the generation of sequences of values. They are defined using the function* syntax.
 
     function* generateSequence() {
-    yield 1;
-    yield 2;
-    yield 3;
+        yield 1;
+        yield 2;
+        yield 3;
     }
 
     const generator = generateSequence();
@@ -85,6 +85,7 @@ In Node.js, functions are a fundamental part of the language, and they come in v
     console.log(generator.next().value); // Output: 1
     console.log(generator.next().value); // Output: 2
     console.log(generator.next().value); // Output: 3
+    
 10. Recursive Functions
     A recursive function is a function that calls itself in order to solve a problem. This is useful for problems that can be broken down into smaller, similar sub-problems.
 

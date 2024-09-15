@@ -55,8 +55,9 @@ Authorization
     Success:
 
         Status Code: 200 OK or 204 No Content (HTTP)
-        Message: "Authorization successful."
+        Message: Authorization successful.
         Action: The user is granted access to the requested resource or allowed to perform the intended action.
+
     Failure:
 
         Status Code: 403 Forbidden (HTTP)

@@ -78,12 +78,9 @@ const userSchema = new mongoose.Schema({
 });
 
 mongoose connection
-mongoose
-.connect(
-mongodb+srv://ajtest:J9Xv169XWFbkSoQT@cluster0.b2p29.mongodb.net/test?retryWrites=true'
-)
+mongoose.connect( 'mongodb+srv://ajtest:J9Xv169XWFbkSoQT@cluster0.b2p29.mongodb.net/test?retryWrites=true' )
 .then(result => {
-app.listen(8082);
+  app.listen(8082);
 })
 .catch(err => console.log(err));
 
@@ -123,8 +120,8 @@ app.listen(8082);
         {	
         $push: {	
         animalArray: {	
-        $each: ['goat'],	
-        $position: -1	
+          $each: ['goat'],	
+          $position: -1	
         }	
         }	
         });	

@@ -16,7 +16,7 @@
 
     In Angular, a directive is a class that can modify the behavior or appearance of DOM elements. Angular directives are a core feature of the framework and are categorized into three main types:
 
-    - Component Directives : Component Directives: These are the most common directives in Angular, and they define components. Components are directives with a template.
+    - Component Directives : These are the most common directives in Angular, and they define components. Components are directives with a template.
     - Structural Directives : These directives change the structure of the DOM by adding, removing, or manipulating elements. Examples include *ngIf, *ngFor, and *ngSwitch.
     - Attribute Directives : These change the appearance or behavior of an element, component, or another directive. An example is ngClass or a custom directive that changes the background color.
  

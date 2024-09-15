@@ -10,7 +10,7 @@ styleUrls: ['./app.component.css'] -----array to non array--->  styleUrl: './app
 @nguniversal/builders:ssr-dev-server to build a server-side rendering application.
 
 
-
+ 
 87% gain on an application build
 82% gain on a dev-server of the application
 

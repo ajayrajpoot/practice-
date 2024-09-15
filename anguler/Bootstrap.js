@@ -10,10 +10,10 @@
 
 ############################
 Angular Bootstrap
-Angular Bootstrap is a component that initiates or starts the Angular application. It basically controls the initialization process of the application. The function used to start the application is angular.bootstrap(). The syntax is given by:
+    Angular Bootstrap is a component that initiates or starts the Angular application. It basically controls the initialization process of the application. The function used to start the application is angular.bootstrap(). The syntax is given by:
 
-angular.bootstrap(element, [modules], [config])
-In the above syntax, the “element” denotes the DOM element. It can be a document, file, etc., basically something that forms the root of the Angular application.
+    angular.bootstrap(element, [modules], [config])
+    In the above syntax, the “element” denotes the DOM element. It can be a document, file, etc., basically something that forms the root of the Angular application.
 
 Next is the “modules” that denote the array of modules, if any, to be loaded.
 
@@ -29,3 +29,4 @@ Root component
 Template
 ############################
 
+*/
