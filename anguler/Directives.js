@@ -20,5 +20,58 @@
     - Structural Directives : These directives change the structure of the DOM by adding, removing, or manipulating elements. Examples include *ngIf, *ngFor, and *ngSwitch.
     - Attribute Directives : These change the appearance or behavior of an element, component, or another directive. An example is ngClass or a custom directive that changes the background color.
  
-    
+    --------------Attribute Directives
+    ng generate directive highlight
+
+    import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+
+    @Directive({
+        selector: '[appHighlight]'  // This is how the directive will be used in HTML
+    })
+    export class HighlightDirective {
+
+        @Input() highlightColor: string = 'yellow'; // Default color is yellow
+
+        constructor(private el: ElementRef) {}
+
+        // Mouse enters the element
+        @HostListener('mouseenter') onMouseEnter() {
+            this.highlight(this.highlightColor || 'yellow');
+        }
+
+        // Mouse leaves the element
+        @HostListener('mouseleave') onMouseLeave() {
+            this.highlight('');
+        }
+
+        private highlight(color: string) {
+            this.el.nativeElement.style.backgroundColor = color;
+        }
+    }
+--------------------- Structural Directives
+ng generate directive unless
+
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({
+  selector: '[appUnless]'  // The directive will be used as *appUnless in templates
+})
+export class UnlessDirective {
+
+  // Condition input for showing/hiding the element
+  @Input() set appUnless(condition: boolean) {
+    if (!condition) {
+      // If condition is false, display the template
+      this.viewContainer.createEmbeddedView(this.templateRef);
+    } else {
+      // If condition is true, remove the element from the DOM
+      this.viewContainer.clear();
+    }
+  }
+
+  constructor(private templateRef: TemplateRef<any>, private viewContainer: ViewContainerRef) {}
+
+}
+
+
  */

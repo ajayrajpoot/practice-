@@ -33,6 +33,24 @@
     -Typically used in guards or resolvers to make decisions based on the entire state of the router.
     -Access the entire tree of routes, including nested routes.
 
+5. Resolve
+    Purpose: A service that provides data for a route. This data can be accessed in a component's constructor.
+
+    Usage:
+
+    -Access data provided in the route's resolve property.  
+
+6. How to hit an API before the loading of the appComponent ?
+
+    To hit an API before the loading of the AppComponent in Angular, you can use a combination of Angular's APP_INITIALIZER and a service to make the API call. This approach allows you to delay the application's bootstrap process until the API call is completed.
+    
+    Step-by-step Guide:
+    Create a Service to Handle the API Call:
+    - Create a new service file (e.g., api.service.ts) and import the HttpClient module from Angular's HttpClientModule.
+    - Implement the HttpClient in the service class, making a GET request to the API endpoint you want to call.
+    - Return the response data as an Observable or Promise from the API call method.
+    Create an AppInitializer to Load the API Data:
+    - Create a new service file (e.g., app-initializer.service.ts) and
 
 
  Summary of Differences:
@@ -399,7 +417,53 @@ How to hit an API before the loading of the appComponent ?
 
 
 
+----------------------------------------
+import { Injectable } from '@angular/core';
+import { Resolve } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class DataResolver implements Resolve<any> {
+  constructor(private http: HttpClient) {}
+
+  resolve(): Observable<any> {
+    // API call before route loads the component
+    return this.http.get('https://api.example.com/data');
+  }
+}
 
 
+
+
+
+
+const routes: Routes = [
+  {
+    path: 'data',
+    component: DataComponent,
+    resolve: { data: DataResolver } // Resolver is associated here
+  },
+];
+
+
+
+@Component({
+  selector: 'app-data',
+  template: `<div *ngIf="data">{{ data }}</div>`,
+})
+export class DataComponent implements OnInit {
+  data: any;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    // Access the resolved data
+    this.data = this.route.snapshot.data['data'];
+  }
+}
+  
 
   */

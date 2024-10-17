@@ -34,6 +34,7 @@ In Angular, lifecycle hooks are methods that allow you to tap into key moments i
     
     ngOnChanges(changes: SimpleChanges) {
         console.log('ngOnChanges', changes);
+
     }
 3. ngOnInit
     Description: Called once after the first ngOnChanges. It’s typically used for initialization that requires input properties to be set.
@@ -108,3 +109,55 @@ ngAfterContentChecked (subsequent call)
 ngAfterViewChecked (subsequent call)
 ngOnDestroy
 These lifecycle hooks allow you to manage the different phases of a component's life in Angular, giving you fine-grained control over its behavior and resource management.
+
+
+
+---------------------------------
+import { Component, AfterContentInit, ContentChild } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  template: `<ng-content></ng-content>`
+})
+export class ChildComponent implements AfterContentInit {
+  @ContentChild('projectedContent') content; 
+
+  //ngAfterContentInit runs after the projected content is available, allowing the ChildComponent to access the projected content.
+  ngAfterContentInit() {
+    console.log('Projected content initialized:', this.content.nativeElement.textContent);
+  }
+    //In this case, the ngAfterContentChecked runs every time the content inside app-child changes, ensuring the content is updated or reacted upon.
+    ngAfterContentChecked() {
+    console.log('Projected content checked:', this.content.nativeElement.textContent);
+  }
+}
+
+@Component({
+  selector: 'app-parent',
+  template: `<app-child><p #projectedContent>This is projected content</p></app-child>`
+})
+export class ParentComponent { }
+
+
+--------------------
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  template: `<p #childContent>Child component content</p>`
+})
+export class ChildComponent implements AfterViewInit {
+  @ViewChild('childContent') content: ElementRef;
+
+  //Here, ngAfterViewInit is triggered after the view containing the paragraph is fully initialized, and you can access the paragraph's content
+  ngAfterViewInit() {
+    console.log('View initialized:', this.content.nativeElement.textContent);
+  }
+//This hook is called after every change detection cycle that affects the view or child views, allowing you to keep track of dynamic updates in the view.
+  ngAfterViewChecked() {
+    console.log('View checked:', this.content.nativeElement.textContent);
+  }
+}
+
+
+*/

@@ -50,7 +50,7 @@ var obj = {
    prop: {
       fullname: 'Aurelio De Rosa',
       getFullname: function() { 
-         return fullname;   
+         return fullname;   // // ReferenceError: fullname is not defined
       }
    }
 };

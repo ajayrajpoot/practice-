@@ -46,7 +46,7 @@ const MyContext = createContext();
 function MyProvider({ children }) {
   const [value, setValue] = useState('initial value');
 
-  const changeValue = (newValue) => setValue(newValue);
+  const changeValue = ( ) => setValue(newValue);
 
   return (
     <MyContext.Provider value={{ value, changeValue }}>
