@@ -13,6 +13,8 @@ constructor
 8	DoCheck
 9	AfterContentChecked
 10	AfterViewChecked
+11	afterNextRender
+12	afterRender
 11	OnDestroy
 
 
@@ -108,6 +110,7 @@ ngDoCheck (subsequent call)
 ngAfterContentChecked (subsequent call)
 ngAfterViewChecked (subsequent call)
 ngOnDestroy
+
 These lifecycle hooks allow you to manage the different phases of a component's life in Angular, giving you fine-grained control over its behavior and resource management.
 
 
