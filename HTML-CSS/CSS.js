@@ -1,6 +1,12 @@
 /**
  * A void element is an element whose content model never allows it to have contents under any circumstances. Void elements can have attributes. The following is a complete list of the void elements in HTML : area , base , br , col , command , embed , hr , img , input , keygen , link , meta , param , source , track , wbr.
  
+flex-box
+The Flexbox is a  one-dimensional layout method for layout items in row columns.
+CSS flexbox is a better way to align items into a container
+Flexbox = flexible + box
+
+
 
 noscript
 viewport
@@ -11,13 +17,17 @@ pseudo-class vs pseudo-element
     Pseudo-elements are used to style specific parts of an element, such as ::before and ::after, which insert content before or after the element's actual content.
 
 display:none vs visibility:hidden
-     The element is completely removed from the layout. It behaves as if the element does not exist on the page, and other elements will be positioned as if it’s not there.
-     The element remains in the layout and occupies space, but it is invisible. The page structure does not change; it’s as if the element is still there but not seen.
+display:none; - It completely removes an HTML tag from the web page like it was never there.
+visibility:hidden;  - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page.
+
+z-index
+Note: Z-index does not work on static position value. It only works on the elements with position: relative, absolute, fixed, or sticky.
+
 
 center an element horizontally and vertically using CSS?
     1. Using Flexbox:
         This method is simple and works well for dynamic or unknown heights and widths.
-
+        
         css
         Copy code
         .container {
